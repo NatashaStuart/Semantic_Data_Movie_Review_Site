@@ -1,0 +1,3926 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.movie_reviews.org#"
+     xml:base="http://www.movie_reviews.org"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:www="http://www.movie_reviews.org#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:www1="http://www.movie-reviews.org#"
+     xmlns:www2="http://www.movie-reviews#">
+    <owl:Ontology rdf:about="http://www.movie-reviews"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.movie-reviews#hasActor -->
+
+    <owl:ObjectProperty rdf:about="http://www.movie-reviews#hasActor">
+        <owl:inverseOf rdf:resource="http://www.movie-reviews#isActorOn"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.movie-reviews#Movie"/>
+        <rdfs:domain rdf:resource="http://www.movie-reviews#TV_show"/>
+        <rdfs:range rdf:resource="http://www.movie-reviews#Actor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.movie-reviews#hasClassification -->
+
+    <owl:ObjectProperty rdf:about="http://www.movie-reviews#hasClassification">
+        <rdfs:domain rdf:resource="http://www.movie-reviews#Movie"/>
+        <rdfs:domain rdf:resource="http://www.movie-reviews#TV_show"/>
+        <rdfs:range rdf:resource="http://www.movie-reviews#Classification"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.movie-reviews#hasCreator -->
+
+    <owl:ObjectProperty rdf:about="http://www.movie-reviews#hasCreator">
+        <owl:inverseOf rdf:resource="http://www.movie-reviews#isCreatorOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.movie-reviews#TV_show"/>
+        <rdfs:range rdf:resource="http://www.movie-reviews#Creator"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.movie-reviews#hasCritic -->
+
+    <owl:ObjectProperty rdf:about="http://www.movie-reviews#hasCritic">
+        <owl:inverseOf rdf:resource="http://www.movie-reviews#writesCriticReview"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.movie-reviews#Critic_review"/>
+        <rdfs:range rdf:resource="http://www.movie-reviews#Critic"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.movie-reviews#hasCriticReview -->
+
+    <owl:ObjectProperty rdf:about="http://www.movie-reviews#hasCriticReview">
+        <rdfs:domain rdf:resource="http://www.movie-reviews#Movie"/>
+        <rdfs:domain rdf:resource="http://www.movie-reviews#TV_show"/>
+        <rdfs:range rdf:resource="http://www.movie-reviews#Critic_review"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.movie-reviews#hasDirector -->
+
+    <owl:ObjectProperty rdf:about="http://www.movie-reviews#hasDirector">
+        <owl:inverseOf rdf:resource="http://www.movie-reviews#isDirectorOn"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.movie-reviews#Movie"/>
+        <rdfs:domain rdf:resource="http://www.movie-reviews#TV_show"/>
+        <rdfs:range rdf:resource="http://www.movie-reviews#Director"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.movie-reviews#hasGenre -->
+
+    <owl:ObjectProperty rdf:about="http://www.movie-reviews#hasGenre">
+        <rdfs:domain rdf:resource="http://www.movie-reviews#Movie"/>
+        <rdfs:domain rdf:resource="http://www.movie-reviews#TV_show"/>
+        <rdfs:range rdf:resource="http://www.movie-reviews#Genre"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.movie-reviews#hasLanguage -->
+
+    <owl:ObjectProperty rdf:about="http://www.movie-reviews#hasLanguage">
+        <rdfs:domain rdf:resource="http://www.movie-reviews#Movie"/>
+        <rdfs:domain rdf:resource="http://www.movie-reviews#TV_show"/>
+        <rdfs:range rdf:resource="http://www.movie-reviews#Language"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.movie-reviews#hasUser -->
+
+    <owl:ObjectProperty rdf:about="http://www.movie-reviews#hasUser">
+        <owl:inverseOf rdf:resource="http://www.movie-reviews#writesUserReview"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.movie-reviews#User_review"/>
+        <rdfs:range rdf:resource="http://www.movie-reviews#User"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.movie-reviews#hasUserReview -->
+
+    <owl:ObjectProperty rdf:about="http://www.movie-reviews#hasUserReview">
+        <rdfs:domain rdf:resource="http://www.movie-reviews#Movie"/>
+        <rdfs:domain rdf:resource="http://www.movie-reviews#TV_show"/>
+        <rdfs:range rdf:resource="http://www.movie-reviews#User_review"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.movie-reviews#hasVoiceActor -->
+
+    <owl:ObjectProperty rdf:about="http://www.movie-reviews#hasVoiceActor">
+        <owl:inverseOf rdf:resource="http://www.movie-reviews#isVoiceActorOn"/>
+        <rdfs:domain rdf:resource="http://www.movie-reviews#Movie"/>
+        <rdfs:domain rdf:resource="http://www.movie-reviews#TV_show"/>
+        <rdfs:range rdf:resource="http://www.movie-reviews#Voice_actor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.movie-reviews#hasWriter -->
+
+    <owl:ObjectProperty rdf:about="http://www.movie-reviews#hasWriter">
+        <owl:inverseOf rdf:resource="http://www.movie-reviews#isWriterOn"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.movie-reviews#Movie"/>
+        <rdfs:domain rdf:resource="http://www.movie-reviews#TV_show"/>
+        <rdfs:range rdf:resource="http://www.movie-reviews#Writer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.movie-reviews#isActorOn -->
+
+    <owl:ObjectProperty rdf:about="http://www.movie-reviews#isActorOn">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.movie-reviews#Actor"/>
+        <rdfs:range rdf:resource="http://www.movie-reviews#Movie"/>
+        <rdfs:range rdf:resource="http://www.movie-reviews#TV_show"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.movie-reviews#isCreatorOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.movie-reviews#isCreatorOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.movie-reviews#Creator"/>
+        <rdfs:range rdf:resource="http://www.movie-reviews#Movie"/>
+        <rdfs:range rdf:resource="http://www.movie-reviews#TV_show"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.movie-reviews#isDirectorOn -->
+
+    <owl:ObjectProperty rdf:about="http://www.movie-reviews#isDirectorOn">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.movie-reviews#Director"/>
+        <rdfs:range rdf:resource="http://www.movie-reviews#Movie"/>
+        <rdfs:range rdf:resource="http://www.movie-reviews#TV_show"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.movie-reviews#isVoiceActorOn -->
+
+    <owl:ObjectProperty rdf:about="http://www.movie-reviews#isVoiceActorOn">
+        <rdfs:domain rdf:resource="http://www.movie-reviews#Voice_actor"/>
+        <rdfs:range rdf:resource="http://www.movie-reviews#Movie"/>
+        <rdfs:range rdf:resource="http://www.movie-reviews#TV_show"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.movie-reviews#isWriterOn -->
+
+    <owl:ObjectProperty rdf:about="http://www.movie-reviews#isWriterOn">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.movie-reviews#Writer"/>
+        <rdfs:range rdf:resource="http://www.movie-reviews#Movie"/>
+        <rdfs:range rdf:resource="http://www.movie-reviews#TV_show"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.movie-reviews#writesCriticReview -->
+
+    <owl:ObjectProperty rdf:about="http://www.movie-reviews#writesCriticReview">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.movie-reviews#Critic"/>
+        <rdfs:range rdf:resource="http://www.movie-reviews#Critic_review"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.movie-reviews#writesUserReview -->
+
+    <owl:ObjectProperty rdf:about="http://www.movie-reviews#writesUserReview">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.movie-reviews#User"/>
+        <rdfs:range rdf:resource="http://www.movie-reviews#User_review"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.movie-reviews#Description -->
+
+    <owl:DatatypeProperty rdf:about="http://www.movie-reviews#Description">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.movie-reviews#Episode_count -->
+
+    <owl:DatatypeProperty rdf:about="http://www.movie-reviews#Episode_count">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.movie-reviews#Name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.movie-reviews#Name">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.movie-reviews#Ongoing -->
+
+    <owl:DatatypeProperty rdf:about="http://www.movie-reviews#Ongoing">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.movie-reviews#Release_date -->
+
+    <owl:DatatypeProperty rdf:about="http://www.movie-reviews#Release_date">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.movie-reviews#Review_comment -->
+
+    <owl:DatatypeProperty rdf:about="http://www.movie-reviews#Review_comment">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.movie-reviews#Review_type -->
+
+    <owl:DatatypeProperty rdf:about="http://www.movie-reviews#Review_type">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.movie-reviews#Run_time -->
+
+    <owl:DatatypeProperty rdf:about="http://www.movie-reviews#Run_time">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.movie-reviews#Star_rating -->
+
+    <owl:DatatypeProperty rdf:about="http://www.movie-reviews#Star_rating">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.movie-reviews#Start_date -->
+
+    <owl:DatatypeProperty rdf:about="http://www.movie-reviews#Start_date">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.movie-reviews#Actor -->
+
+    <owl:Class rdf:about="http://www.movie-reviews#Actor">
+        <rdfs:subClassOf rdf:resource="http://www.movie-reviews#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.movie-reviews#Classification -->
+
+    <owl:Class rdf:about="http://www.movie-reviews#Classification"/>
+    
+
+
+    <!-- http://www.movie-reviews#Creator -->
+
+    <owl:Class rdf:about="http://www.movie-reviews#Creator">
+        <rdfs:subClassOf rdf:resource="http://www.movie-reviews#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.movie-reviews#Critic -->
+
+    <owl:Class rdf:about="http://www.movie-reviews#Critic">
+        <rdfs:subClassOf rdf:resource="http://www.movie-reviews#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.movie-reviews#Critic_review -->
+
+    <owl:Class rdf:about="http://www.movie-reviews#Critic_review">
+        <rdfs:subClassOf rdf:resource="http://www.movie-reviews#Review"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.movie-reviews#Director -->
+
+    <owl:Class rdf:about="http://www.movie-reviews#Director">
+        <rdfs:subClassOf rdf:resource="http://www.movie-reviews#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.movie-reviews#Genre -->
+
+    <owl:Class rdf:about="http://www.movie-reviews#Genre"/>
+    
+
+
+    <!-- http://www.movie-reviews#Language -->
+
+    <owl:Class rdf:about="http://www.movie-reviews#Language"/>
+    
+
+
+    <!-- http://www.movie-reviews#Media -->
+
+    <owl:Class rdf:about="http://www.movie-reviews#Media"/>
+    
+
+
+    <!-- http://www.movie-reviews#Movie -->
+
+    <owl:Class rdf:about="http://www.movie-reviews#Movie">
+        <rdfs:subClassOf rdf:resource="http://www.movie-reviews#Media"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.movie-reviews#Person -->
+
+    <owl:Class rdf:about="http://www.movie-reviews#Person"/>
+    
+
+
+    <!-- http://www.movie-reviews#Review -->
+
+    <owl:Class rdf:about="http://www.movie-reviews#Review"/>
+    
+
+
+    <!-- http://www.movie-reviews#TV_show -->
+
+    <owl:Class rdf:about="http://www.movie-reviews#TV_show">
+        <rdfs:subClassOf rdf:resource="http://www.movie-reviews#Media"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.movie-reviews#User -->
+
+    <owl:Class rdf:about="http://www.movie-reviews#User">
+        <rdfs:subClassOf rdf:resource="http://www.movie-reviews#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.movie-reviews#User_review -->
+
+    <owl:Class rdf:about="http://www.movie-reviews#User_review">
+        <rdfs:subClassOf rdf:resource="http://www.movie-reviews#Review"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.movie-reviews#Voice_actor -->
+
+    <owl:Class rdf:about="http://www.movie-reviews#Voice_actor">
+        <rdfs:subClassOf rdf:resource="http://www.movie-reviews#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.movie-reviews#Writer -->
+
+    <owl:Class rdf:about="http://www.movie-reviews#Writer">
+        <rdfs:subClassOf rdf:resource="http://www.movie-reviews#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.movie-reviews#Aaron_Eckhart -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Aaron_Eckhart">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#The_Dark_Knight"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aaron Eckhart</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Aaron_Paul -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Aaron_Paul">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Breaking_Bad"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Need_for_Speed"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aaron Paul</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Action -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Action">
+        <rdf:type rdf:resource="http://www.movie-reviews#Genre"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Action</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Adventure -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Adventure">
+        <rdf:type rdf:resource="http://www.movie-reviews#Genre"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Adventure</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Al_Pacino -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Al_Pacino">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#The_Godfather"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Al Pacino</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Albert_Brooks -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Albert_Brooks">
+        <rdf:type rdf:resource="http://www.movie-reviews#Voice_actor"/>
+        <rdf:type rdf:resource="http://www.movie-reviews#Writer"/>
+        <www2:isVoiceActorOn rdf:resource="http://www.movie-reviews#Finding_Nemo"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Albert Brooks</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Alexander_Gould -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Alexander_Gould">
+        <rdf:type rdf:resource="http://www.movie-reviews#Voice_actor"/>
+        <rdf:type rdf:resource="http://www.movie-reviews#Writer"/>
+        <www2:isVoiceActorOn rdf:resource="http://www.movie-reviews#Finding_Nemo"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alexander Gould</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Alice_Anna -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Alice_Anna">
+        <rdf:type rdf:resource="http://www.movie-reviews#User"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alice Anna</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Andrew_Lincoln -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Andrew_Lincoln">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#The_Walking_Dead"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrew Lincoln</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Andrew_Stanton -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Andrew_Stanton">
+        <rdf:type rdf:resource="http://www.movie-reviews#Director"/>
+        <rdf:type rdf:resource="http://www.movie-reviews#Writer"/>
+        <www2:isDirectorOn rdf:resource="http://www.movie-reviews#Finding_Nemo"/>
+        <www2:isWriterOn rdf:resource="http://www.movie-reviews#Finding_Nemo"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrew Stanton</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Angela_Kang -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Angela_Kang">
+        <rdf:type rdf:resource="http://www.movie-reviews#Creator"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Angela Kang</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Animation -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Animation">
+        <rdf:type rdf:resource="http://www.movie-reviews#Genre"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Animation</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Ann_Alice -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Ann_Alice">
+        <rdf:type rdf:resource="http://www.movie-reviews#User"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ann Alice</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Anna_Gunn -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Anna_Gunn">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Breaking_Bad"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anna Gunn</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Anthony_Russo -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Anthony_Russo">
+        <rdf:type rdf:resource="http://www.movie-reviews#Director"/>
+        <www2:isDirectorOn rdf:resource="http://www.movie-reviews#Avengers_Endgame"/>
+        <www2:isDirectorOn rdf:resource="http://www.movie-reviews#Avengers_Infinity_War"/>
+        <www2:isDirectorOn rdf:resource="http://www.movie-reviews#Captain_America_the_Winter_Soldier"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anthony Russo</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Arabic -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Arabic">
+        <rdf:type rdf:resource="http://www.movie-reviews#Language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Armie_Hammer -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Armie_Hammer">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#The_Lone_Ranger"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Armie Hammer</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Avatar -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Avatar">
+        <rdf:type rdf:resource="http://www.movie-reviews#Movie"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Sam_Worthington"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Sigourney_Weaver"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Stephen_Lang"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Zoe_Saldana"/>
+        <www2:hasClassification rdf:resource="http://www.movie-reviews#12"/>
+        <www2:hasDirector rdf:resource="http://www.movie-reviews#James_Cameron"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Action"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Adventure"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Fantasy"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Sci_Fi"/>
+        <www2:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A paraplegic Marine dispatched to the moon Pandora on a mission becomes torn between following his orders and protecting the world he feels is his home.</www2:Description>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Avatar</www2:Name>
+        <www2:Release_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2009-12-18T00:00:00Z</www2:Release_date>
+        <www2:Run_time rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.42</www2:Run_time>
+        <www2:Star_rating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.8</www2:Star_rating>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Avatar_the_Last_Airbender -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Avatar_the_Last_Airbender">
+        <rdf:type rdf:resource="http://www.movie-reviews#TV_show"/>
+        <www2:hasClassification rdf:resource="http://www.movie-reviews#PG"/>
+        <www2:hasCreator rdf:resource="http://www.movie-reviews#Bryan_Konietzko"/>
+        <www2:hasCreator rdf:resource="http://www.movie-reviews#Michael_Dante_DiMartino"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Action"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Adventure"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Animation"/>
+        <www2:hasVoiceActor rdf:resource="http://www.movie-reviews#Dee_Bradley_Baker"/>
+        <www2:hasVoiceActor rdf:resource="http://www.movie-reviews#Jack_De_Sena"/>
+        <www2:hasVoiceActor rdf:resource="http://www.movie-reviews#Mae_Whitman"/>
+        <www2:hasVoiceActor rdf:resource="http://www.movie-reviews#Zach_Tyler"/>
+        <www2:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In a war-torn world of elemental magic, a young boy reawakens to undertake a dangerous mystic quest to fulfill his destiny as the Avatar, and bring peace to the world.</www2:Description>
+        <www2:Episode_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">66</www2:Episode_count>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Avatar: The Last Airbender</www2:Name>
+        <www2:Ongoing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</www2:Ongoing>
+        <www2:Star_rating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.2</www2:Star_rating>
+        <www2:Start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2005-02-21T00:00:00Z</www2:Start_date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Avengers_Endgame -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Avengers_Endgame">
+        <rdf:type rdf:resource="http://www.movie-reviews#Movie"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Chris_Evans"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Chris_Hemsworth"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Mark_Ruffalo"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Robert_Downey_Jr"/>
+        <www2:hasClassification rdf:resource="http://www.movie-reviews#12"/>
+        <www2:hasDirector rdf:resource="http://www.movie-reviews#Anthony_Russo"/>
+        <www2:hasDirector rdf:resource="http://www.movie-reviews#Joe_Russo"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Action"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Adventure"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Drama"/>
+        <www2:hasWriter rdf:resource="http://www.movie-reviews#Christopher_Markus"/>
+        <www2:hasWriter rdf:resource="http://www.movie-reviews#Stephen_McFeely"/>
+        <www2:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">After the events of Avengers: Infinity War, the universe is in ruins. With the help of allies, the Avengers assemble again to restore balance to the universe.</www2:Description>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Avengers Endgame</www2:Name>
+        <www2:Release_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-04-26T00:00:00Z</www2:Release_date>
+        <www2:Run_time rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.1</www2:Run_time>
+        <www2:Star_rating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.5</www2:Star_rating>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Avengers_Infinity_War -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Avengers_Infinity_War">
+        <rdf:type rdf:resource="http://www.movie-reviews#Movie"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Chris_Evans"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Chris_Hemsworth"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Mark_Ruffalo"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Robert_Downey_Jr"/>
+        <www2:hasClassification rdf:resource="http://www.movie-reviews#12"/>
+        <www2:hasDirector rdf:resource="http://www.movie-reviews#Anthony_Russo"/>
+        <www2:hasDirector rdf:resource="http://www.movie-reviews#Joe_Russo"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Action"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Adventure"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Sci_Fi"/>
+        <www2:hasWriter rdf:resource="http://www.movie-reviews#Christopher_Markus"/>
+        <www2:hasWriter rdf:resource="http://www.movie-reviews#Stephen_McFeely"/>
+        <www2:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Avengers and their allies must be willing to sacrifice all in an attempt to defeat the powerful Thanos before his blitz of devastation and ruin puts an end to the universe.</www2:Description>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Avengers Infinity War</www2:Name>
+        <www2:Release_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-04-27T00:00:00Z</www2:Release_date>
+        <www2:Run_time rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.29</www2:Run_time>
+        <www2:Star_rating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.5</www2:Star_rating>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Back_to_the_Future -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Back_to_the_Future">
+        <rdf:type rdf:resource="http://www.movie-reviews#Movie"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Christopher_Lloyd"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Crispin_Glover"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Lea_Thompson"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Michael_J_Fox"/>
+        <www2:hasClassification rdf:resource="http://www.movie-reviews#PG"/>
+        <www2:hasDirector rdf:resource="http://www.movie-reviews#Robert_Zemeckis"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Adventure"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Comedy"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Sci_Fi"/>
+        <www2:hasWriter rdf:resource="http://www.movie-reviews#Bob_Gale"/>
+        <www2:hasWriter rdf:resource="http://www.movie-reviews#Robert_Zemeckis"/>
+        <www2:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marty McFly, a high school student, is accidentally sent thirty years into the past in a time-traveling DeLorean invented by his friend, the scientist Doc Brown.</www2:Description>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Back to the Future</www2:Name>
+        <www2:Release_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1985-07-03T00:00:00Z</www2:Release_date>
+        <www2:Run_time rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.56</www2:Run_time>
+        <www2:Star_rating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.5</www2:Star_rating>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Barry_Sonnenfeld -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Barry_Sonnenfeld">
+        <rdf:type rdf:resource="http://www.movie-reviews#Director"/>
+        <www2:isDirectorOn rdf:resource="http://www.movie-reviews#Men_in_Black"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Barry Sonnenfeld</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Ben_Billy -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Ben_Billy">
+        <rdf:type rdf:resource="http://www.movie-reviews#Critic"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ben Billy</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Ben_Bobby -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Ben_Bobby">
+        <rdf:type rdf:resource="http://www.movie-reviews#Critic"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ben Bobby</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Bill_Benny -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Bill_Benny">
+        <rdf:type rdf:resource="http://www.movie-reviews#Critic"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bill Benny</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Bill_Bobby -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Bill_Bobby">
+        <rdf:type rdf:resource="http://www.movie-reviews#Critic"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bill Bobby</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Bill_Pullman -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Bill_Pullman">
+        <rdf:type rdf:resource="http://www.movie-reviews#Writer"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Independence_Day"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bill Pullman</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Billy_Zane -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Billy_Zane">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Titanic"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Billy Zane</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Black_Mirror -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Black_Mirror">
+        <rdf:type rdf:resource="http://www.movie-reviews#TV_show"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Charles_Babalola"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Daniel_Lapaine"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Hannah_John_Kamen"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Michaela_Coel"/>
+        <www2:hasClassification rdf:resource="http://www.movie-reviews#15"/>
+        <www2:hasCreator rdf:resource="http://www.movie-reviews#Charlie_Brooker"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Drama"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Sci_Fi"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Thriller"/>
+        <www2:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An anthology series exploring a twisted, high-tech multiverse where humanity&apos;s greatest innovations and darkest instincts collide.</www2:Description>
+        <www2:Episode_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</www2:Episode_count>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Black Mirror</www2:Name>
+        <www2:Ongoing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</www2:Ongoing>
+        <www2:Star_rating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.8</www2:Star_rating>
+        <www2:Start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2011-12-04T00:00:00Z</www2:Start_date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Black_Panther -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Black_Panther">
+        <rdf:type rdf:resource="http://www.movie-reviews#Movie"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Chadwick_Boseman"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Danai_Gurira"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Lupita_Nyongo"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Michael_B_Jordan"/>
+        <www2:hasClassification rdf:resource="http://www.movie-reviews#12"/>
+        <www2:hasDirector rdf:resource="http://www.movie-reviews#Ryan_Coogler"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Action"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Adventure"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Sci_Fi"/>
+        <www2:hasWriter rdf:resource="http://www.movie-reviews#Jack_Kirby"/>
+        <www2:hasWriter rdf:resource="http://www.movie-reviews#Joe_Robert_Cole"/>
+        <www2:hasWriter rdf:resource="http://www.movie-reviews#Ryan_Coogler"/>
+        <www2:hasWriter rdf:resource="http://www.movie-reviews#Stan_Lee"/>
+        <www2:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">T&apos;Challa, heir to the kingdom of Wakanda, must step forward to lead his people into a new future and must confront a challenger from his country&apos;s past.</www2:Description>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Black Panther</www2:Name>
+        <www2:Release_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-16T00:00:00Z</www2:Release_date>
+        <www2:Run_time rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.14</www2:Run_time>
+        <www2:Star_rating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.3</www2:Star_rating>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Bob_Benny -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Bob_Benny">
+        <rdf:type rdf:resource="http://www.movie-reviews#Critic"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bob Benny</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Bob_Billy -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Bob_Billy">
+        <rdf:type rdf:resource="http://www.movie-reviews#Critic"/>
+        <www2:writesCriticReview rdf:resource="http://www.movie-reviews#Critic_Review_4"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bob Billy</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Bob_Gale -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Bob_Gale">
+        <rdf:type rdf:resource="http://www.movie-reviews#Writer"/>
+        <www2:isWriterOn rdf:resource="http://www.movie-reviews#Back_to_the_Future"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bob Gale</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Bob_Peterson -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Bob_Peterson">
+        <rdf:type rdf:resource="http://www.movie-reviews#Writer"/>
+        <www2:isWriterOn rdf:resource="http://www.movie-reviews#Finding_Nemo"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bob Peterson</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Bonnie_Bedila -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Bonnie_Bedila">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Die_Hard"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bonnie Bedila</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Breaking_Bad -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Breaking_Bad">
+        <rdf:type rdf:resource="http://www.movie-reviews#TV_show"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Aaron_Paul"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Anna_Gunn"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Bryan_Cranston"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Dean_Norris"/>
+        <www2:hasClassification rdf:resource="http://www.movie-reviews#15"/>
+        <www2:hasCreator rdf:resource="http://www.movie-reviews#Vince_Gilligan"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Crime"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Drama"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Thriller"/>
+        <www2:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine in order to secure his family&apos;s future.</www2:Description>
+        <www2:Episode_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">62</www2:Episode_count>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Breaking Bad</www2:Name>
+        <www2:Ongoing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</www2:Ongoing>
+        <www2:Star_rating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.5</www2:Star_rating>
+        <www2:Start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-01-20T00:00:00Z</www2:Start_date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Bruce_Willis -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Bruce_Willis">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Die_Hard"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bruce Wills</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Bryan_Cranston -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Bryan_Cranston">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Breaking_Bad"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bryan Cranston</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Bryan_Konietzko -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Bryan_Konietzko">
+        <rdf:type rdf:resource="http://www.movie-reviews#Creator"/>
+        <www2:isCreatorOf rdf:resource="http://www.movie-reviews#Avatar_the_Last_Airbender"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bryan Konietzko</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Byron_Howard -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Byron_Howard">
+        <rdf:type rdf:resource="http://www.movie-reviews#Director"/>
+        <rdf:type rdf:resource="http://www.movie-reviews#Writer"/>
+        <www2:isDirectorOn rdf:resource="http://www.movie-reviews#Zootopia"/>
+        <www2:isWriterOn rdf:resource="http://www.movie-reviews#Zootopia"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Byron Howard</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Caleb_McLaughlin -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Caleb_McLaughlin">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Stranger_Things"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Caleb McLaughin</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Camila_Mendes -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Camila_Mendes">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Riverdale"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Camila Mendes</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Captain_America_the_Winter_Soldier -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Captain_America_the_Winter_Soldier">
+        <rdf:type rdf:resource="http://www.movie-reviews#Movie"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Chris_Evans"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Robert_Redford"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Samuel_L_Jackson"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Scarlett_Johansson"/>
+        <www2:hasClassification rdf:resource="http://www.movie-reviews#12"/>
+        <www2:hasDirector rdf:resource="http://www.movie-reviews#Anthony_Russo"/>
+        <www2:hasDirector rdf:resource="http://www.movie-reviews#Joe_Russo"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Action"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Adventure"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Sci_Fi"/>
+        <www2:hasWriter rdf:resource="http://www.movie-reviews#Christopher_Markus"/>
+        <www2:hasWriter rdf:resource="http://www.movie-reviews#Stephen_McFeely"/>
+        <www2:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Steve Rogers struggles to embrace the modern world, he teams up with a Avengers, to battle a threat from history: an assassin known as the Winter Soldier.</www2:Description>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Captain America</www2:Name>
+        <www2:Release_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-04-04T00:00:00Z</www2:Release_date>
+        <www2:Run_time rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.16</www2:Run_time>
+        <www2:Star_rating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.7</www2:Star_rating>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Carl_Gottlieb -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Carl_Gottlieb">
+        <rdf:type rdf:resource="http://www.movie-reviews#Writer"/>
+        <www2:isWriterOn rdf:resource="http://www.movie-reviews#Jaws"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carl Gottieb</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Carly_Chaikin -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Carly_Chaikin">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Mr_Robot"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carly Chaikin</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Carrie -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Carrie">
+        <rdf:type rdf:resource="http://www.movie-reviews#Movie"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Chloe_Grace_Moretz"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Gabriella_Wilde"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Julianne_Moore"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Portia_Doubleday"/>
+        <www2:hasClassification rdf:resource="http://www.movie-reviews#15"/>
+        <www2:hasDirector rdf:resource="http://www.movie-reviews#Kimberly_Peirce"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Drama"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Horror"/>
+        <www2:hasWriter rdf:resource="http://www.movie-reviews#Lawrence_D_Cohen"/>
+        <www2:hasWriter rdf:resource="http://www.movie-reviews#Roberto_Aguirre_Sacasa"/>
+        <www2:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A shy girl, outcasted by her peers and sheltered by her religious mother, unleashes telekinetic terror on her small town after being pushed too far at her senior prom.</www2:Description>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carrie</www2:Name>
+        <www2:Release_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-10-18T00:00:00Z</www2:Release_date>
+        <www2:Run_time rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.40</www2:Run_time>
+        <www2:Star_rating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.9</www2:Star_rating>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Chadwick_Boseman -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Chadwick_Boseman">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Black_Panther"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chadwick Boseman</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Chance_Perdomo -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Chance_Perdomo">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Chilling_Adventures_of_Sabrina"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chance Perdomo</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Charles_Babalola -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Charles_Babalola">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Black_Mirror"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Charles Babalola</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Charlie_Brooker -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Charlie_Brooker">
+        <rdf:type rdf:resource="http://www.movie-reviews#Creator"/>
+        <www2:isCreatorOf rdf:resource="http://www.movie-reviews#Black_Mirror"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Charlie Brooker</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Chilling_Adventures_of_Sabrina -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Chilling_Adventures_of_Sabrina">
+        <rdf:type rdf:resource="http://www.movie-reviews#TV_show"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Chance_Perdomo"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Kiernan_Shipka"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Lucy_Davis"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Ross_Lynch"/>
+        <www2:hasClassification rdf:resource="http://www.movie-reviews#15"/>
+        <www2:hasCreator rdf:resource="http://www.movie-reviews#Roberto_Aguirre_Sacasa"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Drama"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Fantasy"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Horror"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Mystery"/>
+        <www2:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">As her 16th birthday nears, Sabrina must choose between the witch world of her family and the human world of her friends. Based on the Archie comic.</www2:Description>
+        <www2:Episode_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">36</www2:Episode_count>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chilling Adventures of Sabrina</www2:Name>
+        <www2:Ongoing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</www2:Ongoing>
+        <www2:Star_rating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.7</www2:Star_rating>
+        <www2:Start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-26T00:00:00Z</www2:Start_date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Chloe_Grace_Moretz -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Chloe_Grace_Moretz">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Carrie"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chloe Grace Moretz</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Chris_Buck -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Chris_Buck">
+        <rdf:type rdf:resource="http://www.movie-reviews#Writer"/>
+        <www2:isWriterOn rdf:resource="http://www.movie-reviews#Frozen"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chris Buck</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Chris_Evans -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Chris_Evans">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Avengers_Endgame"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Avengers_Infinity_War"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Captain_America_the_Winter_Soldier"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chris Evans</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Chris_Hemsworth -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Chris_Hemsworth">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Avengers_Endgame"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Avengers_Infinity_War"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chris Hemsworth</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Christian_Bale -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Christian_Bale">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#The_Dark_Knight"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Christian Bale</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Christian_Slater -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Christian_Slater">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Mr_Robot"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Christian Slater</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Christopher_Lloyd -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Christopher_Lloyd">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Back_to_the_Future"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Christopher Lloyd</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Christopher_Markus -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Christopher_Markus">
+        <rdf:type rdf:resource="http://www.movie-reviews#Writer"/>
+        <www2:isWriterOn rdf:resource="http://www.movie-reviews#Avengers_Endgame"/>
+        <www2:isWriterOn rdf:resource="http://www.movie-reviews#Avengers_Infinity_War"/>
+        <www2:isWriterOn rdf:resource="http://www.movie-reviews#Captain_America_the_Winter_Soldier"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Christopher Markus</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Christopher_Nolan -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Christopher_Nolan">
+        <rdf:type rdf:resource="http://www.movie-reviews#Director"/>
+        <rdf:type rdf:resource="http://www.movie-reviews#Writer"/>
+        <www2:isDirectorOn rdf:resource="http://www.movie-reviews#Inception"/>
+        <www2:isDirectorOn rdf:resource="http://www.movie-reviews#The_Dark_Knight"/>
+        <www2:isWriterOn rdf:resource="http://www.movie-reviews#Inception"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Christopher Nolan</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Claire_Foy -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Claire_Foy">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#The_Crown"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Claire Foy</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Cole_Sprouse -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Cole_Sprouse">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Riverdale"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cole Sprouse</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Comedy -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Comedy">
+        <rdf:type rdf:resource="http://www.movie-reviews#Genre"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Comedy</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Courteney_Cox -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Courteney_Cox">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Friends"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Courteney Cox</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Crime -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Crime">
+        <rdf:type rdf:resource="http://www.movie-reviews#Genre"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Crime</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Crispin_Glover -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Crispin_Glover">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Back_to_the_Future"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Crispin Glover</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Critic_Review_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Critic_Review_1">
+        <rdf:type rdf:resource="http://www.movie-reviews#Critic_review"/>
+        <www2:hasCritic rdf:resource="http://www.movie-reviews#Bill_Benny"/>
+        <www2:Review_comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fabulously terrible</www2:Review_comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Critic_Review_10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Critic_Review_10">
+        <rdf:type rdf:resource="http://www.movie-reviews#Critic_review"/>
+        <www2:Review_comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Would recomend going to see if there is nothing else on</www2:Review_comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Critic_Review_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Critic_Review_2">
+        <rdf:type rdf:resource="http://www.movie-reviews#Critic_review"/>
+        <www2:hasCritic rdf:resource="http://www.movie-reviews#Bill_Benny"/>
+        <www2:Review_comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An epic masterpiece</www2:Review_comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Critic_Review_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Critic_Review_3">
+        <rdf:type rdf:resource="http://www.movie-reviews#Critic_review"/>
+        <www2:hasCritic rdf:resource="http://www.movie-reviews#Ben_Billy"/>
+        <www2:Review_comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Critically impressive</www2:Review_comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Critic_Review_4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Critic_Review_4">
+        <rdf:type rdf:resource="http://www.movie-reviews#Critic_review"/>
+        <www2:hasCritic rdf:resource="http://www.movie-reviews#Bob_Billy"/>
+        <www2:Review_comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stunning visuals</www2:Review_comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Critic_Review_5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Critic_Review_5">
+        <rdf:type rdf:resource="http://www.movie-reviews#Critic_review"/>
+        <www2:hasCritic rdf:resource="http://www.movie-reviews#Ben_Billy"/>
+        <www2:Review_comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Epic set design</www2:Review_comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Critic_Review_6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Critic_Review_6">
+        <rdf:type rdf:resource="http://www.movie-reviews#Critic_review"/>
+        <www2:hasCritic rdf:resource="http://www.movie-reviews#Ben_Bobby"/>
+        <www2:Review_comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A tragic disappointment</www2:Review_comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Critic_Review_7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Critic_Review_7">
+        <rdf:type rdf:resource="http://www.movie-reviews#Critic_review"/>
+        <www2:hasCritic rdf:resource="http://www.movie-reviews#Bill_Benny"/>
+        <www2:Review_comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The perfect ensemble</www2:Review_comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Critic_Review_8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Critic_Review_8">
+        <rdf:type rdf:resource="http://www.movie-reviews#Critic_review"/>
+        <www2:hasCritic rdf:resource="http://www.movie-reviews#Bill_Bobby"/>
+        <www2:Review_comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A delight to watch again and again</www2:Review_comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Critic_Review_9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Critic_Review_9">
+        <rdf:type rdf:resource="http://www.movie-reviews#Critic_review"/>
+        <www2:hasCritic rdf:resource="http://www.movie-reviews#Bob_Benny"/>
+        <www2:Review_comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">One of the best movies ever made</www2:Review_comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#D_B_Weiss -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#D_B_Weiss">
+        <rdf:type rdf:resource="http://www.movie-reviews#Creator"/>
+        <www2:isCreatorOf rdf:resource="http://www.movie-reviews#Game_of_Thrones"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D.B Weiss</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Danai_Gurira -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Danai_Gurira">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Black_Panther"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#The_Walking_Dead"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Danai Gurira</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Daniel_Lapaine -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Daniel_Lapaine">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Black_Mirror"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Daniel Lapaine</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#David_Benioff -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#David_Benioff">
+        <rdf:type rdf:resource="http://www.movie-reviews#Creator"/>
+        <www2:isCreatorOf rdf:resource="http://www.movie-reviews#Game_of_Thrones"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Benioff</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#David_Crane -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#David_Crane">
+        <rdf:type rdf:resource="http://www.movie-reviews#Creator"/>
+        <www2:isCreatorOf rdf:resource="http://www.movie-reviews#Friends"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Crane</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#David_Koepp -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#David_Koepp">
+        <rdf:type rdf:resource="http://www.movie-reviews#Writer"/>
+        <www2:isWriterOn rdf:resource="http://www.movie-reviews#Jurassic_Park"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Koepp</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#David_Reynolds -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#David_Reynolds">
+        <rdf:type rdf:resource="http://www.movie-reviews#Writer"/>
+        <www2:isWriterOn rdf:resource="http://www.movie-reviews#Finding_Nemo"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Reynolds</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#David_S_Goyer -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#David_S_Goyer">
+        <rdf:type rdf:resource="http://www.movie-reviews#Writer"/>
+        <www2:isWriterOn rdf:resource="http://www.movie-reviews#The_Dark_Knight"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David S.Goyer</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Dean_Devlin -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Dean_Devlin">
+        <rdf:type rdf:resource="http://www.movie-reviews#Writer"/>
+        <www2:isWriterOn rdf:resource="http://www.movie-reviews#Independence_Day"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dean Devlin</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Dean_Norris -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Dean_Norris">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Breaking_Bad"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dean Norris</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Dee_Bradley_Baker -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Dee_Bradley_Baker">
+        <rdf:type rdf:resource="http://www.movie-reviews#Voice_actor"/>
+        <www2:isVoiceActorOn rdf:resource="http://www.movie-reviews#Avatar_the_Last_Airbender"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dee Bradley Baker</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Die_Hard -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Die_Hard">
+        <rdf:type rdf:resource="http://www.movie-reviews#Movie"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Bonnie_Bedila"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Bruce_Willis"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Paul_Gleason"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Reginald_VelJohnson"/>
+        <www2:hasClassification rdf:resource="http://www.movie-reviews#15"/>
+        <www2:hasDirector rdf:resource="http://www.movie-reviews#John_McTiernan"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Action"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Thriller"/>
+        <www2:hasWriter rdf:resource="http://www.movie-reviews#Jeb_Stuart"/>
+        <www2:hasWriter rdf:resource="http://www.movie-reviews#Roderick_Thorp"/>
+        <www2:hasWriter rdf:resource="http://www.movie-reviews#Steven_E_de_Souza"/>
+        <www2:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An NYPD officer tries to save his wife and several others taken hostage by German terrorists during a Christmas party at the Nakatomi Plaza in Los Angeles.</www2:Description>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Die Hard</www2:Name>
+        <www2:Release_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1988-07-20T00:00:00Z</www2:Release_date>
+        <www2:Run_time rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.12</www2:Run_time>
+        <www2:Star_rating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.2</www2:Star_rating>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Dominic_Cooper -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Dominic_Cooper">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Need_for_Speed"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dominic Cooper</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Drama -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Drama">
+        <rdf:type rdf:resource="http://www.movie-reviews#Genre"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Drama</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Ed_Solomon -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Ed_Solomon">
+        <rdf:type rdf:resource="http://www.movie-reviews#Writer"/>
+        <www2:isWriterOn rdf:resource="http://www.movie-reviews#Men_in_Black"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ed Solomon</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Edward_Hemming -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Edward_Hemming">
+        <rdf:type rdf:resource="http://www.movie-reviews#Creator"/>
+        <www2:isCreatorOf rdf:resource="http://www.movie-reviews#The_Crown"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Edward Hemming</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Ellen_DeGeneres -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Ellen_DeGeneres">
+        <rdf:type rdf:resource="http://www.movie-reviews#Voice_actor"/>
+        <www2:isVoiceActorOn rdf:resource="http://www.movie-reviews#Finding_Nemo"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ellen DeGeneres</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Ellen_Page -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Ellen_Page">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Inception"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ellen Page</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Emilia_Clarke -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Emilia_Clarke">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Game_of_Thrones"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Emilia Clarke</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#English -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#English">
+        <rdf:type rdf:resource="http://www.movie-reviews#Language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Family -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Family">
+        <rdf:type rdf:resource="http://www.movie-reviews#Genre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Fantasy -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Fantasy">
+        <rdf:type rdf:resource="http://www.movie-reviews#Genre"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fantasy</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Finding_Nemo -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Finding_Nemo">
+        <rdf:type rdf:resource="http://www.movie-reviews#Movie"/>
+        <www2:hasClassification rdf:resource="http://www.movie-reviews#U"/>
+        <www2:hasDirector rdf:resource="http://www.movie-reviews#Andrew_Stanton"/>
+        <www2:hasDirector rdf:resource="http://www.movie-reviews#Lee_Unkrich"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Adventure"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Animation"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Comedy"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Family"/>
+        <www2:hasVoiceActor rdf:resource="http://www.movie-reviews#Albert_Brooks"/>
+        <www2:hasVoiceActor rdf:resource="http://www.movie-reviews#Alexander_Gould"/>
+        <www2:hasVoiceActor rdf:resource="http://www.movie-reviews#Ellen_DeGeneres"/>
+        <www2:hasVoiceActor rdf:resource="http://www.movie-reviews#Willem_Dafoe"/>
+        <www2:hasWriter rdf:resource="http://www.movie-reviews#Andrew_Stanton"/>
+        <www2:hasWriter rdf:resource="http://www.movie-reviews#Bob_Peterson"/>
+        <www2:hasWriter rdf:resource="http://www.movie-reviews#David_Reynolds"/>
+        <www2:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">After his son is captured in the Great Barrier Reef and taken to Sydney, a timid clownfish sets out on a journey to bring him home.</www2:Description>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Finding Nemo</www2:Name>
+        <www2:Release_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2003-05-30T00:00:00Z</www2:Release_date>
+        <www2:Run_time rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.40</www2:Run_time>
+        <www2:Star_rating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.1</www2:Star_rating>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Finn_Wolfhard -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Finn_Wolfhard">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Stranger_Things"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Finn Wolfhard</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Francis_Ford_Coppola -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Francis_Ford_Coppola">
+        <rdf:type rdf:resource="http://www.movie-reviews#Director"/>
+        <www2:isDirectorOn rdf:resource="http://www.movie-reviews#The_Godfather"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Francis Ford Coppola</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Frank_Darabont -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Frank_Darabont">
+        <rdf:type rdf:resource="http://www.movie-reviews#Creator"/>
+        <www2:isCreatorOf rdf:resource="http://www.movie-reviews#The_Walking_Dead"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Frank Darabont</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Friends -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Friends">
+        <rdf:type rdf:resource="http://www.movie-reviews#TV_show"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Courteney_Cox"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Jennifer_Aniston"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Lisa_Kudrow"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Matt_LeBlanc"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Matthew_Perry"/>
+        <www2:hasClassification rdf:resource="http://www.movie-reviews#PG"/>
+        <www2:hasCreator rdf:resource="http://www.movie-reviews#David_Crane"/>
+        <www2:hasCreator rdf:resource="http://www.movie-reviews#Marta_Kauffman"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Comedy"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Romance"/>
+        <www2:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Follows the personal and professional lives of six twenty to thirty-something-year-old friends living in Manhattan.</www2:Description>
+        <www2:Episode_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">236</www2:Episode_count>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Friends</www2:Name>
+        <www2:Ongoing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</www2:Ongoing>
+        <www2:Star_rating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.9</www2:Star_rating>
+        <www2:Start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1994-09-22T00:00:00Z</www2:Start_date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Frozen -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Frozen">
+        <rdf:type rdf:resource="http://www.movie-reviews#Movie"/>
+        <www2:hasClassification rdf:resource="http://www.movie-reviews#PG"/>
+        <www2:hasDirector rdf:resource="http://www.movie-reviews#Chris_Buck"/>
+        <www2:hasDirector rdf:resource="http://www.movie-reviews#Jennifer_Lee"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Adventure"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Animation"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Comedy"/>
+        <www2:hasVoiceActor rdf:resource="http://www.movie-reviews#Idina_Menzel"/>
+        <www2:hasVoiceActor rdf:resource="http://www.movie-reviews#Jonathan_Groff"/>
+        <www2:hasVoiceActor rdf:resource="http://www.movie-reviews#Josh_Gad"/>
+        <www2:hasVoiceActor rdf:resource="http://www.movie-reviews#Kristen_Bell"/>
+        <www2:hasWriter rdf:resource="http://www.movie-reviews#Chris_Buck"/>
+        <www2:hasWriter rdf:resource="http://www.movie-reviews#Hans_Christian_Andersen"/>
+        <www2:hasWriter rdf:resource="http://www.movie-reviews#Jennifer_Lee"/>
+        <www2:hasWriter rdf:resource="http://www.movie-reviews#Shane_Morris"/>
+        <www2:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The new crowned Queen accidentally uses her power to turn her home into winter, her sister teams up with a man, his reindeer, and a snowman to change the weather.</www2:Description>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Frozen</www2:Name>
+        <www2:Release_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-11-27T00:00:00Z</www2:Release_date>
+        <www2:Run_time rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.42</www2:Run_time>
+        <www2:Star_rating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.5</www2:Star_rating>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Gabriella_Wilde -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Gabriella_Wilde">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Carrie"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gabriella Wilde</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Game_of_Thrones -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Game_of_Thrones">
+        <rdf:type rdf:resource="http://www.movie-reviews#TV_show"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Emilia_Clarke"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Kit_Harington"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Lena_Headey"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Peter_Dinklage"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Sophie_Turner"/>
+        <www2:hasCreator rdf:resource="http://www.movie-reviews#D_B_Weiss"/>
+        <www2:hasCreator rdf:resource="http://www.movie-reviews#David_Benioff"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Action"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Adventure"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Drama"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Fantasy"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#12"/>
+        <www2:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nine noble families fight for control over the mythical lands of Westeros, while an ancient enemy returns after being dormant for thousands of years.</www2:Description>
+        <www2:Episode_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">73</www2:Episode_count>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Game of Thrones</www2:Name>
+        <www2:Ongoing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</www2:Ongoing>
+        <www2:Star_rating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.4</www2:Star_rating>
+        <www2:Start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2011-04-17T00:00:00Z</www2:Start_date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Geoffrey_Rush -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Geoffrey_Rush">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Pirates_of_the_Caribbean"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geoffrey Rush</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#George_Gatins -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#George_Gatins">
+        <rdf:type rdf:resource="http://www.movie-reviews#Writer"/>
+        <www2:isWriterOn rdf:resource="http://www.movie-reviews#Need_for_Speed"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">George Gatins</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#George_Lucas -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#George_Lucas">
+        <rdf:type rdf:resource="http://www.movie-reviews#Writer"/>
+        <www2:isWriterOn rdf:resource="http://www.movie-reviews#Raiders_of_the_Lost_Ark"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">George Lucas</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Ginnifer_Goodwin -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Ginnifer_Goodwin">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isVoiceActorOn rdf:resource="http://www.movie-reviews#Zootopia"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ginnifer Goodwin</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Gore_Verbinski -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Gore_Verbinski">
+        <rdf:type rdf:resource="http://www.movie-reviews#Director"/>
+        <www2:isDirectorOn rdf:resource="http://www.movie-reviews#Pirates_of_the_Caribbean"/>
+        <www2:isDirectorOn rdf:resource="http://www.movie-reviews#The_Lone_Ranger"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gore Verbinski</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Hannah_John_Kamen -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Hannah_John_Kamen">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Black_Mirror"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hannah John Kamen</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Hans_Christian_Andersen -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Hans_Christian_Andersen">
+        <rdf:type rdf:resource="http://www.movie-reviews#Writer"/>
+        <www2:isWriterOn rdf:resource="http://www.movie-reviews#Frozen"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hans Christian Andersen</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Harrison_Ford -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Harrison_Ford">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Raiders_of_the_Lost_Ark"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harrison Ford</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Heath_Ledger -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Heath_Ledger">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#The_Dark_Knight"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Heath Ledger</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Helena_Bonham_Carter -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Helena_Bonham_Carter">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#The_Crown"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Helena Bonham Carter</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Hindustani -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Hindustani">
+        <rdf:type rdf:resource="http://www.movie-reviews#Language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Historical -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Historical">
+        <rdf:type rdf:resource="http://www.movie-reviews#Genre"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Historical</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Horror -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Horror">
+        <rdf:type rdf:resource="http://www.movie-reviews#Genre"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Horror</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Idina_Menzel -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Idina_Menzel">
+        <rdf:type rdf:resource="http://www.movie-reviews#Voice_actor"/>
+        <www2:isVoiceActorOn rdf:resource="http://www.movie-reviews#Frozen"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Indina Menzel</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Idris_Elba -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Idris_Elba">
+        <rdf:type rdf:resource="http://www.movie-reviews#Voice_actor"/>
+        <www2:isVoiceActorOn rdf:resource="http://www.movie-reviews#Zootopia"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Idris Elba</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Imogen_Poots -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Imogen_Poots">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Need_for_Speed"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Imogen Poots</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Inception -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Inception">
+        <rdf:type rdf:resource="http://www.movie-reviews#Movie"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Ellen_Page"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Joseph_Gordon_Levitt"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Leonardo_DiCaprio"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Tom_Hardy"/>
+        <www2:hasClassification rdf:resource="http://www.movie-reviews#12"/>
+        <www2:hasCriticReview rdf:resource="http://www.movie-reviews#Critic_Review_4"/>
+        <www2:hasDirector rdf:resource="http://www.movie-reviews#Christopher_Nolan"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Action"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Adventure"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Sci_Fi"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Thriller"/>
+        <www2:hasUserReview rdf:resource="http://www.movie-reviews#User_Review_2"/>
+        <www2:hasWriter rdf:resource="http://www.movie-reviews#Christopher_Nolan"/>
+        <www2:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A thief who steals corporate secrets through the use of dream-sharing technology is given the task of planting an idea into others minds.</www2:Description>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inception</www2:Name>
+        <www2:Release_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-07-16T00:00:00Z</www2:Release_date>
+        <www2:Run_time rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.28</www2:Run_time>
+        <www2:Star_rating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.8</www2:Star_rating>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Independence_Day -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Independence_Day">
+        <rdf:type rdf:resource="http://www.movie-reviews#Movie"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Bill_Pullman"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Jeff_Goldblum"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Mary_McDonnell"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Will_Smith"/>
+        <www2:hasDirector rdf:resource="http://www.movie-reviews#Roland_Emmerich"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Action"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Adventure"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Sci_Fi"/>
+        <www2:hasWriter rdf:resource="http://www.movie-reviews#Dean_Devlin"/>
+        <www2:hasWriter rdf:resource="http://www.movie-reviews#Roland_Emmerich"/>
+        <www2:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The aliens are coming and their goal is to invade and destroy Earth. Fighting superior technology, mankind&apos;s best weapon is the will to survive.</www2:Description>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Independence Day</www2:Name>
+        <www2:Release_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1996-07-03T00:00:00Z</www2:Release_date>
+        <www2:Run_time rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.25</www2:Run_time>
+        <www2:Star_rating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.0</www2:Star_rating>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Jack_De_Sena -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Jack_De_Sena">
+        <rdf:type rdf:resource="http://www.movie-reviews#Voice_actor"/>
+        <www2:isVoiceActorOn rdf:resource="http://www.movie-reviews#Avatar_the_Last_Airbender"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jack De Sena</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Jack_Kirby -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Jack_Kirby">
+        <rdf:type rdf:resource="http://www.movie-reviews#Writer"/>
+        <www2:isWriterOn rdf:resource="http://www.movie-reviews#Black_Panther"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jack Kirby</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Jack_McBrayer -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Jack_McBrayer">
+        <rdf:type rdf:resource="http://www.movie-reviews#Voice_actor"/>
+        <www2:isVoiceActorOn rdf:resource="http://www.movie-reviews#Wreck_it_Ralph"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jack McBrayer</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#James_Caan -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#James_Caan">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#The_Godfather"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">James Caan</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#James_Cameron -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#James_Cameron">
+        <rdf:type rdf:resource="http://www.movie-reviews#Director"/>
+        <rdf:type rdf:resource="http://www.movie-reviews#Writer"/>
+        <www2:isDirectorOn rdf:resource="http://www.movie-reviews#Avatar"/>
+        <www2:isDirectorOn rdf:resource="http://www.movie-reviews#Titanic"/>
+        <www2:isWriterOn rdf:resource="http://www.movie-reviews#Titanic"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">James Cameron</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Jane_Lynch -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Jane_Lynch">
+        <rdf:type rdf:resource="http://www.movie-reviews#Voice_actor"/>
+        <www2:isVoiceActorOn rdf:resource="http://www.movie-reviews#Wreck_it_Ralph"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jane Lynch</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Jared_Bush -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Jared_Bush">
+        <rdf:type rdf:resource="http://www.movie-reviews#Director"/>
+        <rdf:type rdf:resource="http://www.movie-reviews#Writer"/>
+        <www2:isDirectorOn rdf:resource="http://www.movie-reviews#Zootopia"/>
+        <www2:isWriterOn rdf:resource="http://www.movie-reviews#Zootopia"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jared Bush</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Jason_Bateman -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Jason_Bateman">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Zootopia"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jason Bateman</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Jaws -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Jaws">
+        <rdf:type rdf:resource="http://www.movie-reviews#Movie"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Lorraine_Gary"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Richard_Dreyfuss"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Robert_Shaw"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Roy_Scheider"/>
+        <www2:hasClassification rdf:resource="http://www.movie-reviews#12"/>
+        <www2:hasDirector rdf:resource="http://www.movie-reviews#Steven_Spielberg"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Adventure"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Drama"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Thriller"/>
+        <www2:hasWriter rdf:resource="http://www.movie-reviews#Carl_Gottlieb"/>
+        <www2:hasWriter rdf:resource="http://www.movie-reviews#Peter_Benchley"/>
+        <www2:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">When a killer shark unleashes chaos on a beach community, it&apos;s up to a local sheriff, a marine biologist, and an old seafarer to hunt the beast down.</www2:Description>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jaws</www2:Name>
+        <www2:Release_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1975-06-20T00:00:00Z</www2:Release_date>
+        <www2:Run_time rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.4</www2:Run_time>
+        <www2:Star_rating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</www2:Star_rating>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Jay_Wolpert -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Jay_Wolpert">
+        <rdf:type rdf:resource="http://www.movie-reviews#Writer"/>
+        <www2:isWriterOn rdf:resource="http://www.movie-reviews#Pirates_of_the_Caribbean"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jay Wolpert</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Jeb_Stuart -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Jeb_Stuart">
+        <rdf:type rdf:resource="http://www.movie-reviews#Writer"/>
+        <www2:isWriterOn rdf:resource="http://www.movie-reviews#Die_Hard"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jeb Stuart</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Jeff_Goldblum -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Jeff_Goldblum">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Independence_Day"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Jurassic_Park"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jeff Goldblum</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Jennifer_Aniston -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Jennifer_Aniston">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Friends"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jennifer Aniston</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Jennifer_Lee -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Jennifer_Lee">
+        <rdf:type rdf:resource="http://www.movie-reviews#Director"/>
+        <rdf:type rdf:resource="http://www.movie-reviews#Writer"/>
+        <www2:isDirectorOn rdf:resource="http://www.movie-reviews#Frozen"/>
+        <www2:isWriterOn rdf:resource="http://www.movie-reviews#Frozen"/>
+        <www2:isWriterOn rdf:resource="http://www.movie-reviews#Wreck_it_Ralph"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jennifer Lee</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Jenny_Slate -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Jenny_Slate">
+        <rdf:type rdf:resource="http://www.movie-reviews#Voice_actor"/>
+        <www2:isVoiceActorOn rdf:resource="http://www.movie-reviews#Zootopia"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jenny Slate</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Jim_Reardon -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Jim_Reardon">
+        <rdf:type rdf:resource="http://www.movie-reviews#Writer"/>
+        <www2:isWriterOn rdf:resource="http://www.movie-reviews#Wreck_it_Ralph"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jim Reardon</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Joe_Robert_Cole -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Joe_Robert_Cole">
+        <rdf:type rdf:resource="http://www.movie-reviews#Writer"/>
+        <www2:isWriterOn rdf:resource="http://www.movie-reviews#Black_Panther"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joe Robert Cole</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Joe_Russo -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Joe_Russo">
+        <rdf:type rdf:resource="http://www.movie-reviews#Director"/>
+        <www2:isDirectorOn rdf:resource="http://www.movie-reviews#Avengers_Endgame"/>
+        <www2:isDirectorOn rdf:resource="http://www.movie-reviews#Avengers_Infinity_War"/>
+        <www2:isDirectorOn rdf:resource="http://www.movie-reviews#Captain_America_the_Winter_Soldier"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joe Russo</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#John_C_Reilly -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#John_C_Reilly">
+        <rdf:type rdf:resource="http://www.movie-reviews#Voice_actor"/>
+        <www2:isVoiceActorOn rdf:resource="http://www.movie-reviews#Wreck_it_Ralph"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">John C.Reilly</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#John_Gatins -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#John_Gatins">
+        <rdf:type rdf:resource="http://www.movie-reviews#Writer"/>
+        <www2:isWriterOn rdf:resource="http://www.movie-reviews#Need_for_Speed"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">John Gatins</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#John_McTiernan -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#John_McTiernan">
+        <rdf:type rdf:resource="http://www.movie-reviews#Director"/>
+        <www2:isDirectorOn rdf:resource="http://www.movie-reviews#Die_Hard"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">John McTiernan</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Johnny_Depp -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Johnny_Depp">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Pirates_of_the_Caribbean"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#The_Lone_Ranger"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Johnny Depp</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Jonathan_Groff -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Jonathan_Groff">
+        <rdf:type rdf:resource="http://www.movie-reviews#Voice_actor"/>
+        <www2:isVoiceActorOn rdf:resource="http://www.movie-reviews#Frozen"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jonathan Groff</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Jonathan_Nolan -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Jonathan_Nolan">
+        <rdf:type rdf:resource="http://www.movie-reviews#Writer"/>
+        <www2:isWriterOn rdf:resource="http://www.movie-reviews#The_Dark_Knight"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jonathan Nolan</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Joseph_Gordon_Levitt -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Joseph_Gordon_Levitt">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Inception"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joseph Gordon Levitt</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Josh_Gad -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Josh_Gad">
+        <rdf:type rdf:resource="http://www.movie-reviews#Voice_actor"/>
+        <www2:isVoiceActorOn rdf:resource="http://www.movie-reviews#Frozen"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Josh Gad</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Josie_Trinidad -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Josie_Trinidad">
+        <rdf:type rdf:resource="http://www.movie-reviews#Writer"/>
+        <www2:isWriterOn rdf:resource="http://www.movie-reviews#Zootopia"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joise Trinidad</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Julianne_Moore -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Julianne_Moore">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Carrie"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Julianne Moore</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Jurassic_Park -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Jurassic_Park">
+        <rdf:type rdf:resource="http://www.movie-reviews#Movie"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Jeff_Goldblum"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Laura_Dern"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Richard_Attenborough"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Sam_Neil"/>
+        <www2:hasClassification rdf:resource="http://www.movie-reviews#PG"/>
+        <www2:hasDirector rdf:resource="http://www.movie-reviews#Steven_Spielberg"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Action"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Adventure"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Sci_Fi"/>
+        <www2:hasWriter rdf:resource="http://www.movie-reviews#David_Koepp"/>
+        <www2:hasWriter rdf:resource="http://www.movie-reviews#Michael_Crichton"/>
+        <www2:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Paleontologist visiting a theme park is tasked with protecting a couple of kids after a power failure causes the park&apos;s cloned dinosaurs to run loose.</www2:Description>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jurassic Park</www2:Name>
+        <www2:Release_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1993-06-11T00:00:00Z</www2:Release_date>
+        <www2:Run_time rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.7</www2:Run_time>
+        <www2:Star_rating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.1</www2:Star_rating>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Justin_Haythe -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Justin_Haythe">
+        <rdf:type rdf:resource="http://www.movie-reviews#Writer"/>
+        <www2:isWriterOn rdf:resource="http://www.movie-reviews#The_Lone_Ranger"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Justin Haythe</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#K_J_Apa -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#K_J_Apa">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Riverdale"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">K.J. Apa</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Karen_Allen -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Karen_Allen">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Raiders_of_the_Lost_Ark"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Karen Allen</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Kate_Winslet -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Kate_Winslet">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Titanic"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kate Winslet</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Kathy_Bates -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Kathy_Bates">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Titanic"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kathy Bates</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Keira_Knightley -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Keira_Knightley">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Pirates_of_the_Caribbean"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Keira Knightley</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Kid_Cudi -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Kid_Cudi">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Need_for_Speed"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kid Cudi</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Kiernan_Shipka -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Kiernan_Shipka">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Chilling_Adventures_of_Sabrina"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kiernan Shipka</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Kimberly_Peirce -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Kimberly_Peirce">
+        <rdf:type rdf:resource="http://www.movie-reviews#Director"/>
+        <www2:isDirectorOn rdf:resource="http://www.movie-reviews#Carrie"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kimberly Peirce</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Kit_Harington -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Kit_Harington">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Game_of_Thrones"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kit Harington</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Kristen_Bell -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Kristen_Bell">
+        <rdf:type rdf:resource="http://www.movie-reviews#Voice_actor"/>
+        <www2:isVoiceActorOn rdf:resource="http://www.movie-reviews#Frozen"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kristen Bell</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Laura_Dern -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Laura_Dern">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Jurassic_Park"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Laura Dern</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Lawrence_D_Cohen -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Lawrence_D_Cohen">
+        <rdf:type rdf:resource="http://www.movie-reviews#Writer"/>
+        <www2:hasWriter rdf:resource="http://www.movie-reviews#Carrie"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lawrence D. Cohen</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Lawrence_Kasdan -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Lawrence_Kasdan">
+        <rdf:type rdf:resource="http://www.movie-reviews#Writer"/>
+        <www2:hasWriter rdf:resource="http://www.movie-reviews#Raiders_of_the_Lost_Ark"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lawrence Kasdan</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Lea_Thompson -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Lea_Thompson">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Back_to_the_Future"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lea Thompson</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Lee_Unkrich -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Lee_Unkrich">
+        <rdf:type rdf:resource="http://www.movie-reviews#Director"/>
+        <www2:isDirectorOn rdf:resource="http://www.movie-reviews#Finding_Nemo"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lee Unkrich</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Lena_Headey -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Lena_Headey">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Game_of_Thrones"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lena Headey</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Leonardo_DiCaprio -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Leonardo_DiCaprio">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Inception"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Titanic"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Leonardo DiCaprio</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Lili_Reinhart -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Lili_Reinhart">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Riverdale"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lili Reinhard</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Linda_Fiorention -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Linda_Fiorention">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Men_in_Black"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Linda Fiorention</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Lisa_Kudrow -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Lisa_Kudrow">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Friends"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lisa Kudrow</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Lorraine_Gary -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Lorraine_Gary">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Jaws"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lorraine Gary</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Lowell_Cunningham -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Lowell_Cunningham">
+        <rdf:type rdf:resource="http://www.movie-reviews#Writer"/>
+        <www2:isWriterOn rdf:resource="http://www.movie-reviews#Men_in_Black"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lowell Cunningham</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Lucy_Davis -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Lucy_Davis">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Chilling_Adventures_of_Sabrina"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lucy Davis</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Lupita_Nyongo -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Lupita_Nyongo">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Black_Panther"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lupita Nyongo</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Mae_Whitman -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Mae_Whitman">
+        <rdf:type rdf:resource="http://www.movie-reviews#Voice_actor"/>
+        <www2:isVoiceActorOn rdf:resource="http://www.movie-reviews#Avatar_the_Last_Airbender"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mae Whitman</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Mandarin -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Mandarin">
+        <rdf:type rdf:resource="http://www.movie-reviews#Language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Mario_Puzo -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Mario_Puzo">
+        <rdf:type rdf:resource="http://www.movie-reviews#Writer"/>
+        <www2:isWriterOn rdf:resource="http://www.movie-reviews#The_Godfather"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mario Puzo</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Mark_Ruffalo -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Mark_Ruffalo">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Avengers_Endgame"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Avengers_Infinity_War"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mark Ruffalo</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Marlo_Brando -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Marlo_Brando">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#The_Godfather"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marlo Brando</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Marta_Kauffman -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Marta_Kauffman">
+        <rdf:type rdf:resource="http://www.movie-reviews#Creator"/>
+        <www2:isCreatorOf rdf:resource="http://www.movie-reviews#Friends"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marta Kauffman</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Martin_Freeman -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Martin_Freeman">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Black_Panther"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Martin Freeman</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Martin_Wallstrom -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Martin_Wallstrom">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Mr_Robot"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Martin Wallstrom</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Mary_McDonnell -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Mary_McDonnell">
+        <rdf:type rdf:resource="http://www.movie-reviews#Writer"/>
+        <www2:isWriterOn rdf:resource="http://www.movie-reviews#Independence_Day"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mary McDonnell</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Matt_Duffer -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Matt_Duffer">
+        <rdf:type rdf:resource="http://www.movie-reviews#Creator"/>
+        <www2:isCreatorOf rdf:resource="http://www.movie-reviews#Stranger_Things"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Matt Duffer</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Matt_LeBlanc -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Matt_LeBlanc">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Friends"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Matt LeBlanc</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Matt_Smith -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Matt_Smith">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#The_Crown"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Matt Smith</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Matthew_Perry -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Matthew_Perry">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Friends"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Matthew Perry</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Melissa_McBride -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Melissa_McBride">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#The_Walking_Dead"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Melissa McBride</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Men_in_Black -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Men_in_Black">
+        <rdf:type rdf:resource="http://www.movie-reviews#Movie"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Linda_Fiorention"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Tommy_Lee_Jones"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Vincent_D_Onofrio"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Will_Smith"/>
+        <www2:hasClassification rdf:resource="http://www.movie-reviews#12"/>
+        <www2:hasDirector rdf:resource="http://www.movie-reviews#Barry_Sonnenfeld"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Action"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Adventure"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Comedy"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Sci_Fi"/>
+        <www2:hasWriter rdf:resource="http://www.movie-reviews#Ed_Solomon"/>
+        <www2:hasWriter rdf:resource="http://www.movie-reviews#Lowell_Cunningham"/>
+        <www2:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A police officer joins a secret but important organization that polices and watches over extraterrestrial interactions on Earth.</www2:Description>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Men in Black</www2:Name>
+        <www2:Release_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1997-07-02T00:00:00Z</www2:Release_date>
+        <www2:Run_time rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.38</www2:Run_time>
+        <www2:Star_rating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.3</www2:Star_rating>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Michael_B_Jordan -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Michael_B_Jordan">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Black_Panther"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Michael B. Jordan</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Michael_Caine -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Michael_Caine">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#The_Dark_Knight"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Michael Caine</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Michael_Crichton -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Michael_Crichton">
+        <rdf:type rdf:resource="http://www.movie-reviews#Writer"/>
+        <www2:isWriterOn rdf:resource="http://www.movie-reviews#Jurassic_Park"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Michael Crichton</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Michael_Dante_DiMartino -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Michael_Dante_DiMartino">
+        <rdf:type rdf:resource="http://www.movie-reviews#Creator"/>
+        <www2:isCreatorOf rdf:resource="http://www.movie-reviews#Avatar_the_Last_Airbender"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Michael Dante DiMartino</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Michael_J_Fox -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Michael_J_Fox">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Back_to_the_Future"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Michael J. Fox</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Michaela_Coel -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Michaela_Coel">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Black_Mirror"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Michaela Coel</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Millie_Bobby_Brown -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Millie_Bobby_Brown">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Stranger_Things"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Millie Bobby Brown</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Mr_Robot -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Mr_Robot">
+        <rdf:type rdf:resource="http://www.movie-reviews#TV_show"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Carly_Chaikin"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Christian_Slater"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Martin_Wallstrom"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Rami_Malek"/>
+        <www2:hasClassification rdf:resource="http://www.movie-reviews#15"/>
+        <www2:hasCreator rdf:resource="http://www.movie-reviews#Sam_Esmail"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Crime"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Drama"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Thriller"/>
+        <www2:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elliot, a brilliant but highly unstable young cyber-security engineer and vigilante hacker, becomes a key figure in a complex game of global dominance when he and his shadowy allies try to take down the corrupt corporation he works for.</www2:Description>
+        <www2:Episode_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">46</www2:Episode_count>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mr. Robot</www2:Name>
+        <www2:Ongoing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</www2:Ongoing>
+        <www2:Star_rating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.5</www2:Star_rating>
+        <www2:Start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-06-24T00:00:00Z</www2:Start_date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Mystery -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Mystery">
+        <rdf:type rdf:resource="http://www.movie-reviews#Genre"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mystery</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Need_for_Speed -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Need_for_Speed">
+        <rdf:type rdf:resource="http://www.movie-reviews#Movie"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Aaron_Paul"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Dominic_Cooper"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Imogen_Poots"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Kid_Cudi"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Rami_Malek"/>
+        <www2:hasDirector rdf:resource="http://www.movie-reviews#Scott_Waugh"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Action"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Crime"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Thriller"/>
+        <www2:hasWriter rdf:resource="http://www.movie-reviews#George_Gatins"/>
+        <www2:hasWriter rdf:resource="http://www.movie-reviews#John_Gatins"/>
+        <www2:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fresh from prison, a street racer who was framed by a wealthy business associate joins a cross country race with revenge in mind. His ex-partner, learning of the plan, places a massive bounty on his head as the race begins.</www2:Description>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Need for Speed</www2:Name>
+        <www2:Release_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-03-14T00:00:00Z</www2:Release_date>
+        <www2:Run_time rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.12</www2:Run_time>
+        <www2:Star_rating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.5</www2:Star_rating>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Norman_Reedus -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Norman_Reedus">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#The_Walking_Dead"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Noram Reedus</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Olivia_Colman -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Olivia_Colman">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#The_Crown"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Olivia Colman</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Orlando_Bloom -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Orlando_Bloom">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Pirates_of_the_Caribbean"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Orlando Bloom</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#PG -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#PG">
+        <rdf:type rdf:resource="http://www.movie-reviews#Classification"/>
+        <www2:Description>Parental guidance</www2:Description>
+        <www2:Name>PG</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Paul_Freeman -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Paul_Freeman">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Raiders_of_the_Lost_Ark"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paul Freeman</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Paul_Gleason -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Paul_Gleason">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Die_Hard"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paul Gleason</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Peter_Benchley -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Peter_Benchley">
+        <rdf:type rdf:resource="http://www.movie-reviews#Writer"/>
+        <www2:isWriterOn rdf:resource="http://www.movie-reviews#Jaws"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Peter Benchley</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Peter_Dinklage -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Peter_Dinklage">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Game_of_Thrones"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Peter Dinklage</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Peter_Morgan -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Peter_Morgan">
+        <rdf:type rdf:resource="http://www.movie-reviews#Creator"/>
+        <www2:isCreatorOf rdf:resource="http://www.movie-reviews#The_Crown"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Peter Morgan</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Phil_Johnston -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Phil_Johnston">
+        <rdf:type rdf:resource="http://www.movie-reviews#Writer"/>
+        <www2:isWriterOn rdf:resource="http://www.movie-reviews#Wreck_it_Ralph"/>
+        <www2:isWriterOn rdf:resource="http://www.movie-reviews#Zootopia"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phi Johnston</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Philip_Kaufman -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Philip_Kaufman">
+        <rdf:type rdf:resource="http://www.movie-reviews#Writer"/>
+        <www2:isWriterOn rdf:resource="http://www.movie-reviews#Raiders_of_the_Lost_Ark"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Philip Kaufman</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Pirates_of_the_Caribbean -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Pirates_of_the_Caribbean">
+        <rdf:type rdf:resource="http://www.movie-reviews#Movie"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Geoffrey_Rush"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Johnny_Depp"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Keira_Knightley"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Orlando_Bloom"/>
+        <www2:hasClassification rdf:resource="http://www.movie-reviews#12"/>
+        <www2:hasDirector rdf:resource="http://www.movie-reviews#Gore_Verbinski"/>
+        <www2:hasWriter rdf:resource="http://www.movie-reviews#Jay_Wolpert"/>
+        <www2:hasWriter rdf:resource="http://www.movie-reviews#Stuart_Beattie"/>
+        <www2:hasWriter rdf:resource="http://www.movie-reviews#Ted_Elliott"/>
+        <www2:hasWriter rdf:resource="http://www.movie-reviews#Terry_Rossio"/>
+        <www2:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blacksmith Will Turner teams up with eccentric pirate &quot;Captain&quot; Jack Sparrow to save his love, the governor&apos;s daughter, from Jack&apos;s former pirate allies, who are now undead.</www2:Description>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pirates of the Caribbean: The Curse of the Black Pearl</www2:Name>
+        <www2:Release_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-07-13T00:00:00Z</www2:Release_date>
+        <www2:Star_rating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.23</www2:Star_rating>
+        <www2:Star_rating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</www2:Star_rating>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Portia_Doubleday -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Portia_Doubleday">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Carrie"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Portia Doubleday</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Raiders_of_the_Lost_Ark -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Raiders_of_the_Lost_Ark">
+        <rdf:type rdf:resource="http://www.movie-reviews#Movie"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Harrison_Ford"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Karen_Allen"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Paul_Freeman"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Ronald_Lacey"/>
+        <www2:hasDirector rdf:resource="http://www.movie-reviews#Steven_Spielberg"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Action"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Adventure"/>
+        <www2:hasWriter rdf:resource="http://www.movie-reviews#George_Lucas"/>
+        <www2:hasWriter rdf:resource="http://www.movie-reviews#Lawrence_Kasdan"/>
+        <www2:hasWriter rdf:resource="http://www.movie-reviews#Philip_Kaufman"/>
+        <www2:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In 1936, archaeologist and adventurer Indiana Jones is hired by the U.S. government to find the Ark of the Covenant before Adolf Hitler&apos;s Nazis can obtain its awesome powers.</www2:Description>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Raiders of the Lost Ark</www2:Name>
+        <www2:Release_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1981-07-12T00:00:00Z</www2:Release_date>
+        <www2:Run_time rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.55</www2:Run_time>
+        <www2:Star_rating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.4</www2:Star_rating>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Rami_Malek -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Rami_Malek">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Mr_Robot"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Need_for_Speed"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rami Malek</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Reginald_VelJohnson -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Reginald_VelJohnson">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Die_Hard"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reginald VelJohnson</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Rich_Moore -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Rich_Moore">
+        <rdf:type rdf:resource="http://www.movie-reviews#Director"/>
+        <rdf:type rdf:resource="http://www.movie-reviews#Writer"/>
+        <www2:isDirectorOn rdf:resource="http://www.movie-reviews#Wreck_it_Ralph"/>
+        <www2:isDirectorOn rdf:resource="http://www.movie-reviews#Zootopia"/>
+        <www2:isWriterOn rdf:resource="http://www.movie-reviews#Wreck_it_Ralph"/>
+        <www2:isWriterOn rdf:resource="http://www.movie-reviews#Zootopia"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rich Moore</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Richard_Attenborough -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Richard_Attenborough">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Jurassic_Park"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Richard Attenborough</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Richard_Dreyfuss -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Richard_Dreyfuss">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Jaws"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Richard Dreyfuss</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Richard_S_Castellano -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Richard_S_Castellano">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#The_Godfather"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Richard S. Castellano</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Riverdale -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Riverdale">
+        <rdf:type rdf:resource="http://www.movie-reviews#TV_show"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Camila_Mendes"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Cole_Sprouse"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#K_J_Apa"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Lili_Reinhart"/>
+        <www2:hasClassification rdf:resource="http://www.movie-reviews#15"/>
+        <www2:hasCreator rdf:resource="http://www.movie-reviews#Roberto_Aguirre_Sacasa"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Crime"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Drama"/>
+        <www2:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">While navigating the troubled waters of romance, school and family, Archie and his gang become entangled in dark Riverdale mysteries.</www2:Description>
+        <www2:Episode_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">66</www2:Episode_count>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Riverdale</www2:Name>
+        <www2:Ongoing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</www2:Ongoing>
+        <www2:Star_rating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.1</www2:Star_rating>
+        <www2:Start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-26T00:00:00Z</www2:Start_date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Robert_Downey_Jr -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Robert_Downey_Jr">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Avengers_Endgame"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Avengers_Infinity_War"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Robert Downey Jr</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Robert_Redford -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Robert_Redford">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Captain_America_the_Winter_Soldier"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Robert Redford</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Robert_Shaw -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Robert_Shaw">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Jaws"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Robert Shaw</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Robert_Zemeckis -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Robert_Zemeckis">
+        <rdf:type rdf:resource="http://www.movie-reviews#Director"/>
+        <rdf:type rdf:resource="http://www.movie-reviews#Writer"/>
+        <www2:isDirectorOn rdf:resource="http://www.movie-reviews#Back_to_the_Future"/>
+        <www2:isWriterOn rdf:resource="http://www.movie-reviews#Back_to_the_Future"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Robert Zemeckis</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Roberto_Aguirre_Sacasa -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Roberto_Aguirre_Sacasa">
+        <rdf:type rdf:resource="http://www.movie-reviews#Creator"/>
+        <rdf:type rdf:resource="http://www.movie-reviews#Writer"/>
+        <www2:isCreatorOf rdf:resource="http://www.movie-reviews#Chilling_Adventures_of_Sabrina"/>
+        <www2:isCreatorOf rdf:resource="http://www.movie-reviews#Riverdale"/>
+        <www2:isWriterOn rdf:resource="http://www.movie-reviews#Carrie"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Roberto Aguirre Sacasa</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Roderick_Thorp -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Roderick_Thorp">
+        <rdf:type rdf:resource="http://www.movie-reviews#Writer"/>
+        <www2:isWriterOn rdf:resource="http://www.movie-reviews#Die_Hard"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Roderick Trop</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Roland_Emmerich -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Roland_Emmerich">
+        <rdf:type rdf:resource="http://www.movie-reviews#Director"/>
+        <rdf:type rdf:resource="http://www.movie-reviews#Writer"/>
+        <www2:isDirectorOn rdf:resource="http://www.movie-reviews#Independence_Day"/>
+        <www2:isWriterOn rdf:resource="http://www.movie-reviews#Independence_Day"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Roland Emmerich</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Romance -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Romance">
+        <rdf:type rdf:resource="http://www.movie-reviews#Genre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Ronald_Lacey -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Ronald_Lacey">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Raiders_of_the_Lost_Ark"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ronals Lacey</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Ross_Duffer -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Ross_Duffer">
+        <rdf:type rdf:resource="http://www.movie-reviews#Creator"/>
+        <www2:isCreatorOf rdf:resource="http://www.movie-reviews#Stranger_Things"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ross Duffer</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Ross_Lynch -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Ross_Lynch">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Chilling_Adventures_of_Sabrina"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ross Lynch</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Roy_Scheider -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Roy_Scheider">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Jaws"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Roy Scheider</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Ryan_Coogler -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Ryan_Coogler">
+        <rdf:type rdf:resource="http://www.movie-reviews#Director"/>
+        <rdf:type rdf:resource="http://www.movie-reviews#Writer"/>
+        <www2:isDirectorOn rdf:resource="http://www.movie-reviews#Black_Panther"/>
+        <www2:isWriterOn rdf:resource="http://www.movie-reviews#Black_Panther"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ryan Coogler</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Sam_Esmail -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Sam_Esmail">
+        <rdf:type rdf:resource="http://www.movie-reviews#Creator"/>
+        <www2:isCreatorOf rdf:resource="http://www.movie-reviews#Mr_Robot"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sam Esmail</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Sam_Neil -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Sam_Neil">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Jurassic_Park"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sam Neil</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Sam_Worthington -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Sam_Worthington">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Avatar"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sam Worthington</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Samuel_L_Jackson -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Samuel_L_Jackson">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Captain_America_the_Winter_Soldier"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Samuel L. Jackson</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Sarah_Silverman -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Sarah_Silverman">
+        <rdf:type rdf:resource="http://www.movie-reviews#Voice_actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Wreck_it_Ralph"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sarah Silverman</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Scarlett_Johansson -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Scarlett_Johansson">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Avengers_Endgame"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Captain_America_the_Winter_Soldier"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scarlett Johansson</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Sci_Fi -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Sci_Fi">
+        <rdf:type rdf:resource="http://www.movie-reviews#Genre"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sci-Fi</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Scott_Waugh -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Scott_Waugh">
+        <rdf:type rdf:resource="http://www.movie-reviews#Director"/>
+        <www2:isDirectorOn rdf:resource="http://www.movie-reviews#Need_for_Speed"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scott Waugh</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Shane_Morris -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Shane_Morris">
+        <rdf:type rdf:resource="http://www.movie-reviews#Writer"/>
+        <www2:isWriterOn rdf:resource="http://www.movie-reviews#Frozen"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shane Morris</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Sigourney_Weaver -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Sigourney_Weaver">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Avatar"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sigourney Weaver</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Sophie_Turner -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Sophie_Turner">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Game_of_Thrones"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sophie Turner</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Stan_Lee -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Stan_Lee">
+        <rdf:type rdf:resource="http://www.movie-reviews#Writer"/>
+        <www2:isWriterOn rdf:resource="http://www.movie-reviews#Black_Panther"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stan Lee</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Stephen_Lang -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Stephen_Lang">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Avatar"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stephen Lang</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Stephen_McFeely -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Stephen_McFeely">
+        <rdf:type rdf:resource="http://www.movie-reviews#Writer"/>
+        <www2:isWriterOn rdf:resource="http://www.movie-reviews#Avengers_Endgame"/>
+        <www2:isWriterOn rdf:resource="http://www.movie-reviews#Avengers_Infinity_War"/>
+        <www2:isWriterOn rdf:resource="http://www.movie-reviews#Captain_America_the_Winter_Soldier"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stephen McFeely</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Steven_E_de_Souza -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Steven_E_de_Souza">
+        <rdf:type rdf:resource="http://www.movie-reviews#Writer"/>
+        <www2:isWriterOn rdf:resource="http://www.movie-reviews#Die_Hard"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Steven E. de Souza</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Steven_Spielberg -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Steven_Spielberg">
+        <rdf:type rdf:resource="http://www.movie-reviews#Director"/>
+        <www2:isDirectorOn rdf:resource="http://www.movie-reviews#Jaws"/>
+        <www2:isDirectorOn rdf:resource="http://www.movie-reviews#Jurassic_Park"/>
+        <www2:isDirectorOn rdf:resource="http://www.movie-reviews#Raiders_of_the_Lost_Ark"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Steven Spielberg</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Stranger_Things -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Stranger_Things">
+        <rdf:type rdf:resource="http://www.movie-reviews#TV_show"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Caleb_McLaughlin"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Millie_Bobby_Brown"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Winona_Ryder"/>
+        <www2:hasClassification rdf:resource="http://www.movie-reviews#15"/>
+        <www2:hasCreator rdf:resource="http://www.movie-reviews#Finn_Wolfhard"/>
+        <www2:hasCreator rdf:resource="http://www.movie-reviews#Matt_Duffer"/>
+        <www2:hasCreator rdf:resource="http://www.movie-reviews#Ross_Duffer"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Drama"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Fantasy"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Horror"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Mystery"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Sci_Fi"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Thriller"/>
+        <www2:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">When a young boy disappears, his mother, a police chief, and his friends must confront terrifying supernatural forces in order to get him back.</www2:Description>
+        <www2:Episode_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">33</www2:Episode_count>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stranger Things</www2:Name>
+        <www2:Ongoing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</www2:Ongoing>
+        <www2:Star_rating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.8</www2:Star_rating>
+        <www2:Start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-07-15T00:00:00Z</www2:Start_date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Stuart_Beattie -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Stuart_Beattie">
+        <rdf:type rdf:resource="http://www.movie-reviews#Writer"/>
+        <www2:isWriterOn rdf:resource="http://www.movie-reviews#Pirates_of_the_Caribbean"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stuart Beatite</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Ted_Elliott -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Ted_Elliott">
+        <rdf:type rdf:resource="http://www.movie-reviews#Writer"/>
+        <www2:isWriterOn rdf:resource="http://www.movie-reviews#Pirates_of_the_Caribbean"/>
+        <www2:isWriterOn rdf:resource="http://www.movie-reviews#The_Lone_Ranger"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ted Elliott</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Terry_Rossio -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Terry_Rossio">
+        <rdf:type rdf:resource="http://www.movie-reviews#Writer"/>
+        <www2:isWriterOn rdf:resource="http://www.movie-reviews#Pirates_of_the_Caribbean"/>
+        <www2:isWriterOn rdf:resource="http://www.movie-reviews#The_Lone_Ranger"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Terry Rossio</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#The_Crown -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#The_Crown">
+        <rdf:type rdf:resource="http://www.movie-reviews#TV_show"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Claire_Foy"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Helena_Bonham_Carter"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Matt_Smith"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Olivia_Colman"/>
+        <www2:hasClassification rdf:resource="http://www.movie-reviews#15"/>
+        <www2:hasCreator rdf:resource="http://www.movie-reviews#Edward_Hemming"/>
+        <www2:hasCreator rdf:resource="http://www.movie-reviews#Peter_Morgan"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Drama"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Historical"/>
+        <www2:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Follows the political rivalries and romance of Queen Elizabeth II&apos;s reign and the events that shaped the second half of the twentieth century.</www2:Description>
+        <www2:Episode_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</www2:Episode_count>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Crown</www2:Name>
+        <www2:Ongoing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</www2:Ongoing>
+        <www2:Star_rating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.7</www2:Star_rating>
+        <www2:Start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-11-04T00:00:00Z</www2:Start_date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#The_Dark_Knight -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#The_Dark_Knight">
+        <rdf:type rdf:resource="http://www.movie-reviews#Movie"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Aaron_Eckhart"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Christian_Bale"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Heath_Ledger"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Michael_Caine"/>
+        <www2:hasClassification rdf:resource="http://www.movie-reviews#12"/>
+        <www2:hasCriticReview rdf:resource="http://www.movie-reviews#Critic_Review_3"/>
+        <www2:hasDirector rdf:resource="http://www.movie-reviews#Christopher_Nolan"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Action"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Crime"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Drama"/>
+        <www2:hasUserReview rdf:resource="http://www.movie-reviews#User_Review_4"/>
+        <www2:hasWriter rdf:resource="http://www.movie-reviews#David_S_Goyer"/>
+        <www2:hasWriter rdf:resource="http://www.movie-reviews#Jonathan_Nolan"/>
+        <www2:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.</www2:Description>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Dark Knight</www2:Name>
+        <www2:Release_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-07-18T00:00:00Z</www2:Release_date>
+        <www2:Run_time rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.32</www2:Run_time>
+        <www2:Star_rating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.0</www2:Star_rating>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#The_Godfather -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#The_Godfather">
+        <rdf:type rdf:resource="http://www.movie-reviews#Movie"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Al_Pacino"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#James_Caan"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Marlo_Brando"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Richard_S_Castellano"/>
+        <www2:hasClassification rdf:resource="http://www.movie-reviews#18"/>
+        <www2:hasCriticReview rdf:resource="http://www.movie-reviews#Critic_Review_2"/>
+        <www2:hasDirector rdf:resource="http://www.movie-reviews#Francis_Ford_Coppola"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Crime"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Drama"/>
+        <www2:hasUserReview rdf:resource="http://www.movie-reviews#User_Review_3"/>
+        <www2:hasWriter rdf:resource="http://www.movie-reviews#Francis_Ford_Coppola"/>
+        <www2:hasWriter rdf:resource="http://www.movie-reviews#Mario_Puzo"/>
+        <www2:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;Don&quot; Vito Corleone, the aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.</www2:Description>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Godfather</www2:Name>
+        <www2:Release_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1972-03-24T00:00:00Z</www2:Release_date>
+        <www2:Run_time rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.55</www2:Run_time>
+        <www2:Star_rating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.2</www2:Star_rating>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#The_Lone_Ranger -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#The_Lone_Ranger">
+        <rdf:type rdf:resource="http://www.movie-reviews#Movie"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Armie_Hammer"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Johnny_Depp"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Tom_Wilkinson"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#William_Fichtner"/>
+        <www2:hasClassification rdf:resource="http://www.movie-reviews#12"/>
+        <www2:hasDirector rdf:resource="http://www.movie-reviews#Gore_Verbinski"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Action"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Adventure"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Comedy"/>
+        <www2:hasWriter rdf:resource="http://www.movie-reviews#Justin_Haythe"/>
+        <www2:hasWriter rdf:resource="http://www.movie-reviews#Ted_Elliott"/>
+        <www2:hasWriter rdf:resource="http://www.movie-reviews#Terry_Rossio"/>
+        <www2:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Native American warrior Tonto recounts the untold tales that transformed John Reid, a man of the law, into a legend of justice.</www2:Description>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Lone Ranger</www2:Name>
+        <www2:Release_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-07-03T00:00:00Z</www2:Release_date>
+        <www2:Run_time rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.30</www2:Run_time>
+        <www2:Star_rating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.4</www2:Star_rating>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#The_Walking_Dead -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#The_Walking_Dead">
+        <rdf:type rdf:resource="http://www.movie-reviews#TV_show"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Andrew_Lincoln"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Danai_Gurira"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Melissa_McBride"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Norman_Reedus"/>
+        <www2:hasClassification rdf:resource="http://www.movie-reviews#15"/>
+        <www2:hasCreator rdf:resource="http://www.movie-reviews#Angela_Kang"/>
+        <www2:hasCreator rdf:resource="http://www.movie-reviews#Frank_Darabont"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Drama"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Horror"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Thriller"/>
+        <www2:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sheriff Deputy Rick Grimes wakes up from a coma to learn the world is in ruins, and must lead a group of survivors to stay alive.</www2:Description>
+        <www2:Episode_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">148</www2:Episode_count>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Walking Dead</www2:Name>
+        <www2:Ongoing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</www2:Ongoing>
+        <www2:Star_rating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.3</www2:Star_rating>
+        <www2:Start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-10-31T00:00:00Z</www2:Start_date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Thriller -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Thriller">
+        <rdf:type rdf:resource="http://www.movie-reviews#Genre"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thriller</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Titanic -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Titanic">
+        <rdf:type rdf:resource="http://www.movie-reviews#Movie"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Billy_Zane"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Kate_Winslet"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Kathy_Bates"/>
+        <www2:hasActor rdf:resource="http://www.movie-reviews#Leonardo_DiCaprio"/>
+        <www2:hasClassification rdf:resource="http://www.movie-reviews#12"/>
+        <www2:hasDirector rdf:resource="http://www.movie-reviews#James_Cameron"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Drama"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Romance"/>
+        <www2:hasWriter rdf:resource="http://www.movie-reviews#James_Cameron"/>
+        <www2:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.</www2:Description>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Titanic</www2:Name>
+        <www2:Release_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1997-12-19T00:00:00Z</www2:Release_date>
+        <www2:Run_time rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.14</www2:Run_time>
+        <www2:Star_rating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.8</www2:Star_rating>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Tom_Hardy -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Tom_Hardy">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Inception"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tom Hardy</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Tom_Wilkinson -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Tom_Wilkinson">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#The_Lone_Ranger"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tom Wilkinson</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Tommy_Lee_Jones -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Tommy_Lee_Jones">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Men_in_Black"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tommy Lee Jones</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#U -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#U">
+        <rdf:type rdf:resource="http://www.movie-reviews#Classification"/>
+        <www2:Description>Suitable for all</www2:Description>
+        <www2:Description>U</www2:Description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#User_Reivew_10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#User_Reivew_10">
+        <rdf:type rdf:resource="http://www.movie-reviews#User_review"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#User_Review_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#User_Review_1">
+        <rdf:type rdf:resource="http://www.movie-reviews#User_review"/>
+        <www2:Review_comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">it was ok, won&apos;t be seing again</www2:Review_comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#User_Review_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#User_Review_2">
+        <rdf:type rdf:resource="http://www.movie-reviews#User_review"/>
+        <www2:hasUser rdf:resource="http://www.movie-reviews#Alice_Anna"/>
+        <www2:Review_comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">So awsome will be going to see it again</www2:Review_comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#User_Review_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#User_Review_3">
+        <rdf:type rdf:resource="http://www.movie-reviews#User_review"/>
+        <www2:hasUser rdf:resource="http://www.movie-reviews#Ann_Alice"/>
+        <www2:Review_comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Would recommend</www2:Review_comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#User_Review_4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#User_Review_4">
+        <rdf:type rdf:resource="http://www.movie-reviews#User_review"/>
+        <www2:Review_comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">So good, was on the edge of my seat</www2:Review_comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#User_Review_5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#User_Review_5">
+        <rdf:type rdf:resource="http://www.movie-reviews#User_review"/>
+        <www2:Review_comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Would not recommend</www2:Review_comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#User_Review_6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#User_Review_6">
+        <rdf:type rdf:resource="http://www.movie-reviews#User_review"/>
+        <www2:Review_comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">So boring</www2:Review_comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#User_Review_7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#User_Review_7">
+        <rdf:type rdf:resource="http://www.movie-reviews#User_review"/>
+        <www2:Review_comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The ending was great</www2:Review_comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#User_Review_8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#User_Review_8">
+        <rdf:type rdf:resource="http://www.movie-reviews#User_review"/>
+        <www2:Review_comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intresting twist in the middle</www2:Review_comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#User_Review_9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#User_Review_9">
+        <rdf:type rdf:resource="http://www.movie-reviews#User_review"/>
+        <www2:Review_comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Very funny</www2:Review_comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Vince_Gilligan -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Vince_Gilligan">
+        <rdf:type rdf:resource="http://www.movie-reviews#Creator"/>
+        <www2:isCreatorOf rdf:resource="http://www.movie-reviews#Breaking_Bad"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vince Gilligan</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Vincent_D_Onofrio -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Vincent_D_Onofrio">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Men_in_Black"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vincent D. Onofrio</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Western -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Western">
+        <rdf:type rdf:resource="http://www.movie-reviews#Genre"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Western</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Will_Smith -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Will_Smith">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Independence_Day"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Men_in_Black"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Will Smith</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Willem_Dafoe -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Willem_Dafoe">
+        <rdf:type rdf:resource="http://www.movie-reviews#Voice_actor"/>
+        <www2:isVoiceActorOn rdf:resource="http://www.movie-reviews#Finding_Nemo"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Willem Dafoe</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#William_Fichtner -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#William_Fichtner">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#The_Lone_Ranger"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">William Fichtner</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Winona_Ryder -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Winona_Ryder">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Stranger_Things"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Winona Ryder</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Wreck_it_Ralph -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Wreck_it_Ralph">
+        <rdf:type rdf:resource="http://www.movie-reviews#Movie"/>
+        <www2:hasClassification rdf:resource="http://www.movie-reviews#PG"/>
+        <www2:hasDirector rdf:resource="http://www.movie-reviews#Rich_Moore"/>
+        <www2:hasVoiceActor rdf:resource="http://www.movie-reviews#Jack_McBrayer"/>
+        <www2:hasVoiceActor rdf:resource="http://www.movie-reviews#Jane_Lynch"/>
+        <www2:hasVoiceActor rdf:resource="http://www.movie-reviews#John_C_Reilly"/>
+        <www2:hasVoiceActor rdf:resource="http://www.movie-reviews#Sarah_Silverman"/>
+        <www2:hasWriter rdf:resource="http://www.movie-reviews#Jennifer_Lee"/>
+        <www2:hasWriter rdf:resource="http://www.movie-reviews#Jim_Reardon"/>
+        <www2:hasWriter rdf:resource="http://www.movie-reviews#Phil_Johnston"/>
+        <www2:hasWriter rdf:resource="http://www.movie-reviews#Rich_Moore"/>
+        <www2:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A video game villain wants to be a hero and sets out to fulfill his dream, but his quest brings havoc to the whole arcade where he lives.</www2:Description>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wreck-It Ralph</www2:Name>
+        <www2:Release_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2012-11-02T00:00:00Z</www2:Release_date>
+        <www2:Run_time rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.41</www2:Run_time>
+        <www2:Star_rating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.7</www2:Star_rating>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Zach_Tyler -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Zach_Tyler">
+        <rdf:type rdf:resource="http://www.movie-reviews#Voice_actor"/>
+        <www2:isVoiceActorOn rdf:resource="http://www.movie-reviews#Avatar_the_Last_Airbender"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zach Tyler</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Zoe_Saldana -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Zoe_Saldana">
+        <rdf:type rdf:resource="http://www.movie-reviews#Actor"/>
+        <www2:isActorOn rdf:resource="http://www.movie-reviews#Avatar"/>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zoe Saldana</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#Zootopia -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#Zootopia">
+        <rdf:type rdf:resource="http://www.movie-reviews#Movie"/>
+        <www2:hasClassification rdf:resource="http://www.movie-reviews#PG"/>
+        <www2:hasDirector rdf:resource="http://www.movie-reviews#Byron_Howard"/>
+        <www2:hasDirector rdf:resource="http://www.movie-reviews#Jared_Bush"/>
+        <www2:hasDirector rdf:resource="http://www.movie-reviews#Rich_Moore"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Adventure"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Animation"/>
+        <www2:hasGenre rdf:resource="http://www.movie-reviews#Comedy"/>
+        <www2:hasVoiceActor rdf:resource="http://www.movie-reviews#Ginnifer_Goodwin"/>
+        <www2:hasVoiceActor rdf:resource="http://www.movie-reviews#Idris_Elba"/>
+        <www2:hasVoiceActor rdf:resource="http://www.movie-reviews#Jason_Bateman"/>
+        <www2:hasVoiceActor rdf:resource="http://www.movie-reviews#Jenny_Slate"/>
+        <www2:hasWriter rdf:resource="http://www.movie-reviews#Byron_Howard"/>
+        <www2:hasWriter rdf:resource="http://www.movie-reviews#Jared_Bush"/>
+        <www2:hasWriter rdf:resource="http://www.movie-reviews#Jennifer_Lee"/>
+        <www2:hasWriter rdf:resource="http://www.movie-reviews#Josie_Trinidad"/>
+        <www2:hasWriter rdf:resource="http://www.movie-reviews#Phil_Johnston"/>
+        <www2:hasWriter rdf:resource="http://www.movie-reviews#Rich_Moore"/>
+        <www2:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In a city of Zootopia, a rookie bunny cop and a cynical con artist fox must work together to uncover a conspiracy, with many layers.</www2:Description>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zootopia</www2:Name>
+        <www2:Release_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-03-04T00:00:00Z</www2:Release_date>
+        <www2:Run_time rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.48</www2:Run_time>
+        <www2:Star_rating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</www2:Star_rating>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#12">
+        <rdf:type rdf:resource="http://www.movie-reviews#Classification"/>
+        <www2:Description>Suitable only for 12 years and over</www2:Description>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#15 -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#15">
+        <rdf:type rdf:resource="http://www.movie-reviews#Classification"/>
+        <www2:Description>Suitable only for 15 years and over</www2:Description>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15</www2:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movie-reviews#18 -->
+
+    <owl:NamedIndividual rdf:about="http://www.movie-reviews#18">
+        <rdf:type rdf:resource="http://www.movie-reviews#Classification"/>
+        <www2:Description>Suitable only for adults</www2:Description>
+        <www2:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">18</www2:Name>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

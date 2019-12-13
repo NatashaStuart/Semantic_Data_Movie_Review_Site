@@ -1,0 +1,180 @@
+.masthead {
+  height: 60vh;
+  min-height: 450px;
+  background-image: url("/images/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* padding-bottom: 2px;
+  padding-top: 0px; */
+}
+
+.small, small {
+    font-size: 84%;
+  }
+
+.icon-account-login {
+  fill: #f00;
+}
+#card_wrapper {
+width: 500px;
+border: 1px solid black;
+overflow: hidden; /* will contain if #first is longer than #second */
+}
+#card_right {
+width: 300px;
+float:left; /* add this */
+border: 1px solid red;
+}
+#card_left {
+border: 1px solid green;
+overflow: hidden; /* if you don't want #second to wrap below #first */
+}
+
+#div-left {
+    display: inline-block;
+}
+
+#div-right {
+    display: inline-block;
+}
+
+#sticky-footer {
+  /* position: absolute; */
+  bottom: 0;
+  width: 100%;
+  height: 15rem;
+}
+.content-wrap{
+  padding-bottom: 15rem;
+}
+
+.pro-mg-bt{
+  margin-bottom: 345px;
+}
+
+.ab-mg-bt{
+  margin-bottom: 440px;
+}
+
+.bd-mg-bt{
+    margin-bottom: 150px;
+}
+
+.lg-mg-bt{
+    margin-bottom: 100px;
+}
+
+.bc-mg-bt{
+    margin-bottom: 200px;
+}
+
+/* does not work on small screen sizes */
+@media screen and (max-width: 759px) {
+  #sticky-footer {
+    height: 0rem;
+  }
+  .content-wrap{
+    padding-bottom: 0rem;
+  }
+
+  .pro-mg-bt{
+    margin-bottom: 0px;
+  }
+
+  .ab-mg-bt{
+    margin-bottom: 0px;
+  }
+
+  .bd-mg-bt{
+      margin-bottom: 0px;
+  }
+
+  .lg-mg-bt{
+      margin-bottom: 0px;
+  }
+
+  .bc-mg-bt{
+      margin-bottom: 0px;
+  }
+
+}
+
+
+
+
+.social-icons a{
+    color: #ffffff;
+}
+
+.logo a{
+  color: #000;
+}
+
+.footer-logo a{
+  color: #fb9700;
+}
+
+.logo-big{
+  font-size: 40px;
+}
+
+.line{
+  display: inline;
+}
+
+.fav-heart{
+  padding-left: 8px;
+  font-size: 25px;
+}
+
+.search table tr td.rate {
+    color: #f39c12;
+    line-height: 50px;
+}
+
+.search table tr:hover {
+    cursor: pointer;
+}
+
+.search table tr td.image {
+	width: 50px;
+}
+
+.search table tr td img {
+	width: 50px;
+	height: 50px;
+}
+
+.search table tr td.rate {
+	color: #f39c12;
+	line-height: 50px;
+}
+
+.search table tr td.price {
+	font-size: 1.5em;
+	line-height: 50px;
+}
+
+.search #price1,
+.search #price2 {
+	display: inline;
+	font-weight: 600;
+}
+
+.bottom-right{
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.y {
+  color: #ffed4a!important;
+}
+
+/* set at different heights */
+#map {
+  margin-top: 5px;
+  height: 250px;
+  width: 500px;
+}
